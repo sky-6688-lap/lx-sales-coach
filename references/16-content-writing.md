@@ -74,3 +74,18 @@
 批量出稿时，每条给：编号 / 适用发布场景 / 正文 / 取材来源 / 需要用户补的一处（若有）。末尾附一句「全部已过表述红线，未使用未经授权案例」，不要写成免责声明式长段。
 
 相关：[13-operations.md](13-operations.md)（内容块的时间安排）、[11-after-sale.md](11-after-sale.md)（口碑素材的授权与脱敏）、[15-message-checklist.md](15-message-checklist.md)（发送前自检）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 要成文模板与批量出稿 | [61 content-templates](61-content-templates.md) |
+| 内容获客的取材地图 | [59 inbound-content](59-inbound-content.md) |
+| 把示例换成自己行业的词 | [66 scenario-replacements](66-scenario-replacements.md) |
+| 把文案交给别人接着写 | [73 handover-templates](73-handover-templates.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

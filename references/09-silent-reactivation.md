@@ -81,3 +81,18 @@
 四段式的第一段要写清「能确定的只有他没回，X / Y 都是推测，依据分别是什么」；第二段说明为什么选这条对多种可能都成立；第三段给成品消息，**一次只给当前该发的那一条**，不要把三次全列出来让用户挑；第四段写「发完看有没有实质回复」，禁忌通常是「别追问原因、别主动降价」。
 
 相关：[04-chat-review.md](04-chat-review.md)（沉默前那几轮哪里断了）、[05-objection-price.md](05-objection-price.md)（他回来后说的是贵）、[10-close-and-deposit.md](10-close-and-deposit.md)（他回来后直接要开始）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 先判断沉默到底属于哪种 | [45 silent-attribution](45-silent-attribution.md) |
+| 要能直接发的激活消息库 | [46 reactivation-library](46-reactivation-library.md) |
+| 检查自己有没有踩跟进错误 | [47 followup-mistakes](47-followup-mistakes.md) |
+| 三次之后该止损或重启 | [44 stop-loss-and-reentry](44-stop-loss-and-reentry.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

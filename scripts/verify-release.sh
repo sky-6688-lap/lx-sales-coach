@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# 发布前机械校验：结构、frontmatter、链接、红线关键词、文件规模
+# 发布前机械校验：结构、frontmatter、链接、红线关键词、文件规模、可达性、内容质量
 set -euo pipefail
 
 repo_root="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
@@ -44,7 +44,7 @@ if skill_path.is_file():
         "## 一、运行时不可丢失的规则",
         "## 三、第一道门禁（硬性）",
         "## 四、状态机：先判状态，再路由",
-        "## 五、回答格式（四段式，缺一不可）",
+        "## 五、回答格式（四段式，默认结构）",
         "## 六、消息风格六条",
         "## 七、绝对红线",
     ]
@@ -119,7 +119,57 @@ if not m:
 elif m.group(1) not in changelog:
     errors.append("CHANGELOG.md 没有对应版本的记录")
 
-# 8. 统计
+# 8. 可达性：81 篇不能出现「写了但永远读不到」的死文件
+skill_text = (root / "SKILL.md").read_text(encoding="utf-8") if (root / "SKILL.md").is_file() else ""
+router_text = (ref_dir / "00-router.md").read_text(encoding="utf-8") if (ref_dir / "00-router.md").is_file() else ""
+index_path = ref_dir / "80-glossary-and-index.md"
+index_text = index_path.read_text(encoding="utf-8") if index_path.is_file() else ""
+corpus = "\n".join(
+    p.read_text(encoding="utf-8") for p in refs
+    if p.name not in ("00-router.md", "80-glossary-and-index.md")
+)
+for p in refs:
+    if p.name in ("00-router.md", "80-glossary-and-index.md"):
+        continue
+    if not any(p.name in t for t in (skill_text, router_text, index_text, corpus)):
+        errors.append(f"不可达文件：{p.name} 未被 SKILL.md / 00 / 80 / 其他参考篇点名")
+
+missing_idx = [p.name for p in refs if p.name not in index_text]
+if missing_idx:
+    errors.append(f"80 全库速查表未点名 {len(missing_idx)} 篇：{missing_idx[:6]}")
+if "逐状态精确寻址表" not in skill_text:
+    errors.append("SKILL.md 缺少逐状态精确寻址表")
+for p in refs[:17]:
+    if "## 深挖指引" not in p.read_text(encoding="utf-8"):
+        errors.append(f"主链路缺少深挖指引：{p.name}")
+
+# 9. 规则一致性与文档同步
+if "四段式，缺一不可" in skill_text:
+    errors.append("SKILL.md 仍写「四段式缺一不可」，与 00 / 20 的简化口径冲突")
+if "门禁 = 三件事 + 一句客户原话" not in skill_text:
+    errors.append("SKILL.md 门禁四项口径未统一")
+readme = (root / "README.md").read_text(encoding="utf-8") if (root / "README.md").is_file() else ""
+for token in ("17–75", "76–80"):
+    if token not in readme:
+        errors.append(f"README 分组与 SKILL/00 不一致，缺少「{token}」")
+
+# 10. 成品示例消息长度：示例就是标准，不能自己违反六条风格规则
+skip_markers = (".md", "模板示例", "状态 S", "SKILL.md")
+skip_prefixes = ("补 ", "本文", "本篇", "相关：", "判断：", "依据：")
+long_msgs = []
+for p in refs:
+    for lineno, line in enumerate(p.read_text(encoding="utf-8").splitlines(), 1):
+        if not line.startswith("> ") or line.startswith(">>"):
+            continue
+        s = line[2:].strip()
+        if len(s) < 10 or s.startswith("#") or any(m in s for m in skip_markers) or s.startswith(skip_prefixes):
+            continue
+        if len(s) > 60:
+            long_msgs.append(f"{p.name}:{lineno}（{len(s)} 字）")
+if long_msgs:
+    errors.append(f"成品示例消息超过 60 字共 {len(long_msgs)} 条：{long_msgs[:6]}")
+
+# 11. 统计
 total_chars = sum(len(p.read_text(encoding="utf-8")) for p in all_md)
 total_bytes = sum(p.stat().st_size for p in root.rglob("*") if p.is_file())
 if total_chars < 160000:
@@ -133,5 +183,5 @@ if errors:
         print(f"[失败] {e}", file=sys.stderr)
     print(f"校验失败：{len(errors)} 项", file=sys.stderr)
     sys.exit(1)
-print("校验通过：结构 / frontmatter / 链接 / 红线关键词 / 版本一致")
+print("校验通过：结构 / frontmatter / 链接 / 红线关键词 / 版本一致 / 81 篇可达性 / 索引覆盖 / 示例消息长度 / 规则一致性")
 PY

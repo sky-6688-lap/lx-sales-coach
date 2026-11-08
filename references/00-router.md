@@ -93,3 +93,22 @@
 ## 八、一条总原则
 
 **宁可少给一招，也别给一版发不出去的话。** 用户拿着成品消息是要真发的，任何一处需要他再改一遍才能用，都算这次没做完。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 状态判不准、跨层问题 | [17 gate-playbook](17-gate-playbook.md) |
+| 要对 20 个判定案例校准 | [18 state-judgment-cases](18-state-judgment-cases.md) |
+| 要把话改得更像人话 | [19 message-style-rewrites](19-message-style-rewrites.md) |
+| 要看四段式的完整示例 | [20 four-part-answer-examples](20-four-part-answer-examples.md) |
+| 遇到能不能给的边界 | [21 boundaries-and-compliance](21-boundaries-and-compliance.md) |
+| 想先了解整套怎么组织 | [76 sales-system-overview](76-sales-system-overview.md) |
+| 想知道为什么这样设计 | [78 principles-and-tradeoffs](78-principles-and-tradeoffs.md) |
+| 按具体问题反查文件 | [80 glossary-and-index](80-glossary-and-index.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

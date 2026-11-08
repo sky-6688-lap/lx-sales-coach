@@ -88,3 +88,18 @@
 这个阶段最忌讳**用更多信息去压对方的不确定**。他没感觉的时候，补案例、补资质、补优惠都只会让对话更重。正确动作是缩小范围：问一个具体到他能一句话回答的问题。
 
 相关：[02-pricing-and-quote.md](02-pricing-and-quote.md)（说清价值之后才谈报价）、[03-needs-diagnosis.md](03-needs-diagnosis.md)（把第三句的问题接下去）、[07-objection-trust.md](07-objection-trust.md)（只想白问的边界）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 一句话说不清自己卖什么 | [22 one-sentence-examples](22-one-sentence-examples.md) |
+| 第一次开口、刚加上微信 | [23 first-contact-scenarios](23-first-contact-scenarios.md) |
+| 想看某个行业怎么走单 | [62 industry-playbooks](62-industry-playbooks.md) |
+| 要把示例换成自己行业的词 | [66 scenario-replacements](66-scenario-replacements.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

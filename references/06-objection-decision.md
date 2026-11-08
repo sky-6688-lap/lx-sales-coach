@@ -86,3 +86,17 @@
 回答这类问题时，四段式里的「一句判断」要直接写清「这是真决策还是委婉收尾，依据是哪句原话」；第三段消息不超过 3 条；第四段的「下一步」写清「发出去后看的是他有没有回答那个具体问题」，禁忌通常写「别追问顾虑、别主动降价、别造时间压力」。
 
 相关：[05-objection-price.md](05-objection-price.md)（价格与决策同时出现时的分流）、[07-objection-trust.md](07-objection-trust.md)（「考虑」背后其实是怕没效果）、[09-silent-reactivation.md](09-silent-reactivation.md)（说完就没下文）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 「考虑 / 商量 / 再看看」的不同变体 | [38 decision-variants](38-decision-variants.md) |
+| 万元级、要走长周期的单 | [70 long-cycle-deals](70-long-cycle-deals.md) |
+| 想推进但不想施压 | [51 no-pressure-closing](51-no-pressure-closing.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

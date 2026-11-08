@@ -74,3 +74,18 @@
 最忌讳**用工具去掩盖判断**：表格、系统、日历都只是承载，真正决定时间分配的仍是「他有没有说过自己的处境、有没有说过怎么定」。这两条没有，就别投入制作时间。
 
 相关：[08-follow-up-rhythm.md](08-follow-up-rhythm.md)（跟进节奏）、[16-content-writing.md](16-content-writing.md)（内容成文模板与批量出稿）、[04-chat-review.md](04-chat-review.md)（每周一次复盘）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 客户分级与时间分配 | [58 client-grading-and-time](58-client-grading-and-time.md) |
+| 写能带来咨询的内容 | [59 inbound-content](59-inbound-content.md) |
+| 把客户信息交接出去 | [73 handover-templates](73-handover-templates.md) |
+| 做四周经营复盘 | [74 weekly-review-examples](74-weekly-review-examples.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

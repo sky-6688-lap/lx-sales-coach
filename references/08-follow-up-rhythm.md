@@ -81,3 +81,20 @@
 最忌讳**在没有新东西的时候出现**。判断该不该发，只问一句：这条消息里有没有一样他上次没见过的、对他有用的东西？没有就不发，等有了再发。
 
 相关：[09-silent-reactivation.md](09-silent-reactivation.md)（三条消息具体怎么写）、[06-objection-decision.md](06-objection-decision.md)（说完「考虑一下」之后的第一次）、[13-operations.md](13-operations.md)（多单并行时的客户分级）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 跟进的总原则 | [41 followup-principles](41-followup-principles.md) |
+| 按客单价分档定节奏 | [42 rhythm-by-price-band](42-rhythm-by-price-band.md) |
+| 三次触点分别给什么 | [43 three-touchpoints](43-three-touchpoints.md) |
+| 要一张 30 天跟进日历 | [65 followup-calendar](65-followup-calendar.md) |
+| 该停了、以及什么条件下重启 | [44 stop-loss-and-reentry](44-stop-loss-and-reentry.md) |
+| 对照 20 个跟进错误 | [47 followup-mistakes](47-followup-mistakes.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

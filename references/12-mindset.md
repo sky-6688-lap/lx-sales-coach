@@ -81,3 +81,18 @@
 这一层最忌讳**把用户的状态问题变成能力评价**。只描述动作与后果，把「下一次具体做什么」留在第四段。若用户表达的是持续、强烈的情绪困扰，超出本 Skill 范围，如实说明并建议寻求合适的专业支持，不硬给销售话术。
 
 相关：[02-pricing-and-quote.md](02-pricing-and-quote.md)（固定报价句）、[05-objection-price.md](05-objection-price.md)（一还价就心虚）、[13-operations.md](13-operations.md)（把注意力放回可执行的动作）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 不敢报价的专项练习 | [57 fear-of-charging-drills](57-fear-of-charging-drills.md) |
+| 角色演练 | [67 roleplay-drills](67-roleplay-drills.md) |
+| 30 天自我练习计划 | [79 self-practice-plan](79-self-practice-plan.md) |
+| 看看别人踩过哪些坑 | [69 failure-cases](69-failure-cases.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

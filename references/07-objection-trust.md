@@ -83,3 +83,17 @@
 最忌讳**为了让人放心而把话说满**。一句「肯定没问题」换来的短期安心，会在交付期变成更大的矛盾；而这个 Skill 的所有输出都要能经得起用户真的把它发出去。
 
 相关：[05-objection-price.md](05-objection-price.md)（「贵」常是「不确定值不值」）、[06-objection-decision.md](06-objection-decision.md)（信任不足时的「考虑一下」）、[11-after-sale.md](11-after-sale.md)（把真实交付变成可沉淀的口碑）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 客户要保证、要兜底 | [39 trust-and-guarantees](39-trust-and-guarantees.md) |
+| 一直免费问、突然变冷 | [40 coldness-and-free-asking](40-coldness-and-free-asking.md) |
+| 想用口碑素材但要先拿授权 | [56 testimonials-and-authorization](56-testimonials-and-authorization.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

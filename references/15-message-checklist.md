@@ -62,3 +62,17 @@
 一次给多条消息或文案时，逐条过前六项，另外检查：条目之间是否有真实差异（不是同一句换几个词）、是否用了不同客户的同一句原话、有没有把模板示例当真实案例。
 
 相关：[SKILL.md](../SKILL.md) 第五、六节（回答格式与风格六条）、[14-quick-answers.md](14-quick-answers.md)（占位版口径）、[16-content-writing.md](16-content-writing.md)（内容类输出）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 要用成套的 8 张检查表 | [68 checklist-bundle](68-checklist-bundle.md) |
+| 改掉念稿腔的写法对照 | [19 message-style-rewrites](19-message-style-rewrites.md) |
+| 确认这句有没有越界 | [21 boundaries-and-compliance](21-boundaries-and-compliance.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

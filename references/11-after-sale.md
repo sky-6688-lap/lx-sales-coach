@@ -74,3 +74,19 @@
 最忌讳**把已经建立的关系当成可无限取用的渠道**。每一次开口都要有真实由头（他说过的结果、他问过的问题、他给过的许可），没有就不开口。
 
 相关：[10-close-and-deposit.md](10-close-and-deposit.md)（收款后第一句）、[13-operations.md](13-operations.md)（老客与新客的时间分配）、[16-content-writing.md](16-content-writing.md)（素材如何变成内容）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 交付期每个节点怎么铺垫 | [52 delivery-checkpoints](52-delivery-checkpoints.md) |
+| 续费与涨价 | [53 renewal-and-price-change](53-renewal-and-price-change.md) |
+| 什么时候开口要转介绍 | [54 referral-timing-and-scripts](54-referral-timing-and-scripts.md) |
+| 答谢与分佣怎么定 | [55 referral-rewards-and-cps](55-referral-rewards-and-cps.md) |
+| 收集口碑素材与授权 | [56 testimonials-and-authorization](56-testimonials-and-authorization.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

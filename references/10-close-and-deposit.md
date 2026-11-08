@@ -71,3 +71,19 @@
 这一步最忌讳**在最后一刻加码**：临时优惠、临时承诺、临时加赠，都会让对方重新怀疑前面所有信息。判断做对了的标志是：对话里出现了一个带日期的动作，双方都知道下一步谁做什么。
 
 相关：[02-pricing-and-quote.md](02-pricing-and-quote.md)（一页提案）、[06-objection-decision.md](06-objection-decision.md)（还有决策人）、[11-after-sale.md](11-after-sale.md)（交付期）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 收口只要三句 | [48 close-three-sentences](48-close-three-sentences.md) |
+| 定金四要素与退还规则 | [49 deposit-rules](49-deposit-rules.md) |
+| 收款之后第一句怎么说 | [50 after-payment](50-after-payment.md) |
+| 不施压也能推进 | [51 no-pressure-closing](51-no-pressure-closing.md) |
+| 群里或公开场合收口 | [72 group-and-public-scenarios](72-group-and-public-scenarios.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

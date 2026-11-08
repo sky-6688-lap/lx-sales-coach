@@ -84,3 +84,19 @@
 先判断「能不能报」→ 给依据（哪两个信号已具备 / 缺哪个）→ 给含三件套的成品消息 → 下一步写清「发完看对方问的是范围、时间还是钱」，并附一条禁忌，通常是「别在对方没回应时追加解释或主动降价」。
 
 相关：[05-objection-price.md](05-objection-price.md)（报完价出现价格异议）、[10-close-and-deposit.md](10-close-and-deposit.md)（确认后的定金动作）、[09-silent-reactivation.md](09-silent-reactivation.md)（报价后沉默）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 定价底气与价格结构 | [24 pricing-logic](24-pricing-logic.md) |
+| 该不该现在报、什么时候报 | [25 quote-timing](25-quote-timing.md) |
+| 要写一页提案 | [26 proposal-templates](26-proposal-templates.md) |
+| 要不要让价、怎么涨价 | [27 discount-and-price-change](27-discount-and-price-change.md) |
+| 百元级低客单的极简流程 | [71 low-price-deals](71-low-price-deals.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

@@ -81,11 +81,101 @@
 | S8 只要一句话 | 14 | 60 / 63 |
 | S9 要出内容 | 16 | 59 / 61 |
 
-## 四、维护规则
+## 四、全库速查（81 篇逐篇点名）
 
-新增或改名文件后，必须同步更新三处：本索引、[00-router.md](00-router.md) 的文件地图、SKILL.md 的目录结构与路由表。校验脚本会检查编号连续性与所有相对链接；索引漏更新不会被脚本发现，属于人工检查项（见 [tests/regression-checklist.md](../tests/regression-checklist.md)）。
+> 这张表只用于维护与反查：确认编号对应哪个文件。日常使用按第一、二节查，不要通读。
 
-## 五、禁忌
+| 编号 | 文件 | 主题 |
+|---|---|---|
+| 00 | [00-router.md](00-router.md) | 总路由：先判状态，再动手 |
+| 01 | [01-value-and-positioning.md](01-value-and-positioning.md) | 把「我会什么」翻译成「你能得到什么」 |
+| 02 | [02-pricing-and-quote.md](02-pricing-and-quote.md) | 定价底气、报价时机与一页提案 |
+| 03 | [03-needs-diagnosis.md](03-needs-diagnosis.md) | 需求诊断：从「他说的事」到「他真正要买的」 |
+| 04 | [04-chat-review.md](04-chat-review.md) | 聊天记录复盘：找断点，不改作文 |
+| 05 | [05-objection-price.md](05-objection-price.md) | 价格类异议：先分类，再接 |
+| 06 | [06-objection-decision.md](06-objection-decision.md) | 决策类异议：把「考虑一下」变成一个具体动作 |
+| 07 | [07-objection-trust.md](07-objection-trust.md) | 信任类异议与突然变冷 |
+| 08 | [08-follow-up-rhythm.md](08-follow-up-rhythm.md) | 跟进节奏：每次都带点新东西 |
+| 09 | [09-silent-reactivation.md](09-silent-reactivation.md) | 沉默激活：三次不同的出现 |
+| 10 | [10-close-and-deposit.md](10-close-and-deposit.md) | 临门一脚：把「好啊」变成一个具体动作 |
+| 11 | [11-after-sale.md](11-after-sale.md) | 成交之后：复购、转介绍与口碑素材 |
+| 12 | [12-mindset.md](12-mindset.md) | 卡在自己这边：不敢收钱、被拒绝、报价心虚 |
+| 13 | [13-operations.md](13-operations.md) | 经营侧：客户分级、时间分配、能带来咨询的内容 |
+| 14 | [14-quick-answers.md](14-quick-answers.md) | 高频场景速查（占位版） |
+| 15 | [15-message-checklist.md](15-message-checklist.md) | 发送前自检清单与场景替换表 |
+| 16 | [16-content-writing.md](16-content-writing.md) | 销售内容：取材地图与成文模板 |
+| 17 | [17-gate-playbook.md](17-gate-playbook.md) | 门禁实战手册：信息不全时怎么问、怎么给 |
+| 18 | [18-state-judgment-cases.md](18-state-judgment-cases.md) | 状态判定 20 例（含误判纠正） |
+| 19 | [19-message-style-rewrites.md](19-message-style-rewrites.md) | 消息风格：20 组不合格 → 合格改写 |
+| 20 | [20-four-part-answer-examples.md](20-four-part-answer-examples.md) | 四段式完整示例 8 例 |
+| 21 | [21-boundaries-and-compliance.md](21-boundaries-and-compliance.md) | 红线全集：什么必须拒绝，以及怎么给替代动作 |
+| 22 | [22-one-sentence-examples.md](22-one-sentence-examples.md) | 三格句：12 个行业填表示例与病句诊所 |
+| 23 | [23-first-contact-scenarios.md](23-first-contact-scenarios.md) | 首次开口：10 个场景的第一句 |
+| 24 | [24-pricing-logic.md](24-pricing-logic.md) | 定价逻辑：把「我花了几小时」换成「他省了什么」 |
+| 25 | [25-quote-timing.md](25-quote-timing.md) | 报价时机：三信号、报早与报晚各 6 例 |
+| 26 | [26-proposal-templates.md](26-proposal-templates.md) | 一页提案：3 个行业模板与漏项清单 |
+| 27 | [27-discount-and-price-change.md](27-discount-and-price-change.md) | 折扣、涨价与老客砍价：12 种场景 |
+| 28 | [28-question-bank.md](28-question-bank.md) | 四层提问库：40 句可替换的问法 |
+| 29 | [29-fake-needs-in-detail.md](29-fake-needs-in-detail.md) | 三类伪需求：12 个识别信号与处理 |
+| 30 | [30-diagnosis-records.md](30-diagnosis-records.md) | 四张记录表：把聊天变成资产 |
+| 31 | [31-lost-deal-attribution.md](31-lost-deal-attribution.md) | 丢单归因：事实、推断与 9 类断点 |
+| 32 | [32-customer-language.md](32-customer-language.md) | 用客户原词：20 组改写对照与术语替换表 |
+| 33 | [33-objection-taxonomy.md](33-objection-taxonomy.md) | 异议总纲：四类来源、分流树与复合异议 |
+| 34 | [34-price-budget.md](34-price-budget.md) | 价格异议一：预算不够 / 这次拿不出 |
+| 35 | [35-price-value-uncertainty.md](35-price-value-uncertainty.md) | 价格异议二：不确定值不值 |
+| 36 | [36-competitor-comparison.md](36-competitor-comparison.md) | 价格异议三：别家便宜，怎么对齐口径 |
+| 37 | [37-haggling-scripts.md](37-haggling-scripts.md) | 价格异议四：砍价与试探，10 种说法的接法 |
+| 38 | [38-decision-variants.md](38-decision-variants.md) | 决策类异议：五种说法逐句拆解 |
+| 39 | [39-trust-and-guarantees.md](39-trust-and-guarantees.md) | 信任类：要保证、要案例、要方案、没做过我这种 |
+| 40 | [40-coldness-and-free-asking.md](40-coldness-and-free-asking.md) | 突然变冷、已读不回、只想白问 |
+| 41 | [41-followup-principles.md](41-followup-principles.md) | 跟进的第一原则：每次带一样新东西 |
+| 42 | [42-rhythm-by-price-band.md](42-rhythm-by-price-band.md) | 跟进节奏矩阵：三档价格 × 四种情况 |
+| 43 | [43-three-touchpoints.md](43-three-touchpoints.md) | 三次触点的分工与完整消息串 |
+| 44 | [44-stop-loss-and-reentry.md](44-stop-loss-and-reentry.md) | 止损线与重新出现的真实理由 |
+| 45 | [45-silent-attribution.md](45-silent-attribution.md) | 沉默归因：八种可能，只有一条是事实 |
+| 46 | [46-reactivation-library.md](46-reactivation-library.md) | 沉默激活消息库：18 条按节点取用 |
+| 47 | [47-followup-mistakes.md](47-followup-mistakes.md) | 跟进 20 个常见错误与改写 |
+| 48 | [48-close-three-sentences.md](48-close-three-sentences.md) | 收口三句与 8 个变体 |
+| 49 | [49-deposit-rules.md](49-deposit-rules.md) | 定金：四要素、规则未定与分阶段收款 |
+| 50 | [50-after-payment.md](50-after-payment.md) | 收款之后：第一句、排期与材料清单 |
+| 51 | [51-no-pressure-closing.md](51-no-pressure-closing.md) | 不施压成交：15 条禁止清单与替代动作 |
+| 52 | [52-delivery-checkpoints.md](52-delivery-checkpoints.md) | 交付期三个自然节点 |
+| 53 | [53-renewal-and-price-change.md](53-renewal-and-price-change.md) | 续费与涨价：从「还剩什么问题」切入 |
+| 54 | [54-referral-timing-and-scripts.md](54-referral-timing-and-scripts.md) | 转介绍：开口时机与 12 句可发的话 |
+| 55 | [55-referral-rewards-and-cps.md](55-referral-rewards-and-cps.md) | 答谢、分佣与 CPS：规则边界 |
+| 56 | [56-testimonials-and-authorization.md](56-testimonials-and-authorization.md) | 口碑素材：授权、脱敏与归档 |
+| 57 | [57-fear-of-charging-drills.md](57-fear-of-charging-drills.md) | 不敢收钱：固定句式与 10 组练习 |
+| 58 | [58-client-grading-and-time.md](58-client-grading-and-time.md) | 客户分级与三块时间 |
+| 59 | [59-inbound-content.md](59-inbound-content.md) | 没人来问：四类内容的 12 个开头 |
+| 60 | [60-quick-answers-extra.md](60-quick-answers-extra.md) | 高频速查补编（25–40 问） |
+| 61 | [61-content-templates.md](61-content-templates.md) | 内容成文模板、批量出稿与红线 |
+| 62 | [62-industry-playbooks.md](62-industry-playbooks.md) | 六个行业走单示例：从门禁到收口 |
+| 63 | [63-chat-script-library.md](63-chat-script-library.md) | 全链路成品消息库 40 条 |
+| 64 | [64-objection-response-matrix.md](64-objection-response-matrix.md) | 异议回应矩阵：30 句原话 → 判断 → 一句回应 |
+| 65 | [65-followup-calendar.md](65-followup-calendar.md) | 30 天跟进日历（千元级已报价单示例） |
+| 66 | [66-scenario-replacements.md](66-scenario-replacements.md) | 12 个行业占位替换词典 |
+| 67 | [67-roleplay-drills.md](67-roleplay-drills.md) | 十组角色演练：难接的话怎么接 |
+| 68 | [68-checklist-bundle.md](68-checklist-bundle.md) | 八张可直接用的检查表 |
+| 69 | [69-failure-cases.md](69-failure-cases.md) | 二十个「这样发就废了」的反面案例 |
+| 70 | [70-long-cycle-deals.md](70-long-cycle-deals.md) | 长周期单（万元以上）：八个节点与常见塌方 |
+| 71 | [71-low-price-deals.md](71-low-price-deals.md) | 低客单轻决策：极简流程与 10 个场景 |
+| 72 | [72-group-and-public-scenarios.md](72-group-and-public-scenarios.md) | 群聊、评论区与公开场合：12 个应对 |
+| 73 | [73-handover-templates.md](73-handover-templates.md) | 交接与变更模板：八种「情况变了」怎么说 |
+| 74 | [74-weekly-review-examples.md](74-weekly-review-examples.md) | 四周复盘示例：每周只改一处 |
+| 75 | [75-faq-for-agent.md](75-faq-for-agent.md) | 运行时疑难：20 个「该给什么」的边界问答 |
+| 76 | [76-sales-system-overview.md](76-sales-system-overview.md) | 整套系统总览：八十篇怎么配合工作 |
+| 77 | [77-conversation-anatomy.md](77-conversation-anatomy.md) | 一段完整对话的逐轮解剖 |
+| 78 | [78-principles-and-tradeoffs.md](78-principles-and-tradeoffs.md) | 十二条设计取舍：为什么不做某些事 |
+| 79 | [79-self-practice-plan.md](79-self-practice-plan.md) | 三十天练习计划：每天只改一个动作 |
+| 80 | [80-glossary-and-index.md](80-glossary-and-index.md) | 术语表与全库索引 |
+
+编号 00–80 连续、每篇必须在此出现一次。发布校验脚本会检查本表覆盖率与全库可达性。
+
+## 五、维护规则
+
+新增或改名文件后，必须同步更新三处：本索引、[00-router.md](00-router.md) 的文件地图、SKILL.md 的目录结构与路由表。校验脚本会检查编号连续性、所有相对链接、本表覆盖率与每篇的可达性；新增文件后未同步本表会直接导致校验失败（见 [tests/regression-checklist.md](../tests/regression-checklist.md)）。
+
+## 六、禁忌
 
 最忌讳**拿着索引去通读**。找到那一行，读一到两篇，写完过 15 的自检，就够了。
 

@@ -85,3 +85,20 @@
 这一类最忌讳**把价格谈成拉锯**。判断做对了的标志：对话从「多少钱」转到「做什么、拿到什么、什么时候开始」。如果三轮下来还停在数字上，说明分类没做对，退回第一节的那一句重新问，而不是继续让价。
 
 相关：[06-objection-decision.md](06-objection-decision.md)（价格谈完仍不决策）、[10-close-and-deposit.md](10-close-and-deposit.md)（用定金或小第一步收口）、[12-mindset.md](12-mindset.md)（一还价就心虚的自我处理）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 先分清是哪一类价格异议 | [33 objection-taxonomy](33-objection-taxonomy.md) |
+| 客户说预算不够 | [34 price-budget](34-price-budget.md) |
+| 客户觉得不值这个价 | [35 price-value-uncertainty](35-price-value-uncertainty.md) |
+| 客户拿别家报价来比 | [36 competitor-comparison](36-competitor-comparison.md) |
+| 客户直接砍价 | [37 haggling-scripts](37-haggling-scripts.md) |
+| 要现成的 30 句应答 | [64 objection-response-matrix](64-objection-response-matrix.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

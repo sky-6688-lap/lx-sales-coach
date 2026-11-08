@@ -55,3 +55,18 @@
 给完断点，附一个「下一单可以先用起来的一句」，通常就是需求确认句（见 03）或带下一步的报价三件套（见 02）。不要一次给三条改进项，一次只改一个断点，改完看下一次聊天的信号。
 
 相关：[00-router.md](00-router.md)（状态判定顺序）、[08-follow-up-rhythm.md](08-follow-up-rhythm.md)（复盘后决定还跟不跟）。
+
+---
+
+## 深挖指引
+
+本篇给的是这一阶段的判断框架。下面这些场景另有专门文件，遇到时**改读对应篇**即可：本篇与深挖篇合计不超过 2 篇；用户问题已经很具体时，可以直接从深挖篇开始，不必先读本篇。
+
+| 什么时候 | 改读 |
+|---|---|
+| 这一单到底丢在哪 | [31 lost-deal-attribution](31-lost-deal-attribution.md) |
+| 对照 20 个反面案例 | [69 failure-cases](69-failure-cases.md) |
+| 做四周复盘 | [74 weekly-review-examples](74-weekly-review-examples.md) |
+| 逐轮解剖一整段对话 | [77 conversation-anatomy](77-conversation-anatomy.md) |
+
+逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。
