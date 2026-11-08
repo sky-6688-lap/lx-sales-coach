@@ -83,14 +83,16 @@ for p in tracked:
             raw.decode("utf-8")
         except UnicodeDecodeError:
             errors.append(f"非 UTF-8 文件：{p.relative_to(ROOT)}")
-    if p.suffix == ".sh" and b"\r\n" in raw:
-        errors.append(f"shell 脚本含 CRLF，Linux CI 会执行失败：{p.relative_to(ROOT)}")
+    # 所有文本统一 LF：Windows 上 Python write_text 会悄悄把 \n 变 \r\n，
+    # 会让工作区 / zip / 仓库三份内容不一致（ Git blob SHA 不同）。
+    if p.suffix in {".md", ".json", ".yaml", ".yml", ".sh", ".py"} and b"\r\n" in raw:
+        errors.append(f"文本文件含 CRLF，跨平台内容会不一致：{p.relative_to(ROOT)}")
     if p.suffix in {".md", ".yaml", ".yml"}:
         text = raw.decode("utf-8", errors="ignore")
         # 只认「前面不是字母/数字/下划线」的单个盘符，避免把 https:// 里的 s:// 误判成盘符
         for hit in re.findall(r"(?<![A-Za-z0-9_])[A-Za-z]:[\\/][^\s)\]`]+", text):
             errors.append(f"含本机绝对路径（影响其他平台）：{p.relative_to(ROOT)} -> {hit[:50]}")
-notes.append(f"扫描 {len(tracked)} 个文件：UTF-8 / shell 行尾 / 无绝对路径")
+notes.append(f"扫描 {len(tracked)} 个文件：UTF-8 / 全文本 LF 行尾 / 无绝对路径")
 
 # 4. 本机各平台技能目录探测（只报告，不判失败）
 platform_dirs = {

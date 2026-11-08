@@ -23,6 +23,7 @@
 - 新增 `tests/canary-cases.json`（97 条真实业务问句）与 `scripts/run-canary.py`：硬检查每篇落点存在、在精确寻址表与全库速查中均被点名、问句不重复；`--emit-prompts` 生成可粘贴给 Agent 的运行时实测提示词。
 - 新增 `scripts/check-compat.py`：对照本机 Codex 系统技能的真实 `agents/openai.yaml` 格式，静态检查三平台 frontmatter、编码、shell 行尾与绝对路径；`tests/platform-smoke.md` + `scripts/platform-smoke.sh` 提供三平台一键 smoke 提示词与结果记录表。**本机无 Codex / Claude Code 运行时，语义触发实测未伪造通过**。
 - `verify-release.sh` 的篇数、规模、canary 条数全部改为从 `version.json` 读取，新增对新增工程文件与 README 分组的检查。
+- 全包文本统一 LF 行尾，`check-compat.py` 的行尾检查从 `.sh` 扩展到所有文本类型；修复 Windows 下 `write_text` 悄悄写入 CRLF 导致工作区 / zip / 仓库三份内容不一致的问题（逐文件 Git blob SHA 比对验证为 0 差异）。
 
 **规模**：104 个 markdown / 约 25.4 万字符 / 约 59 万字节。与原包长片段逐字比对仍为 0 处相同。
 
