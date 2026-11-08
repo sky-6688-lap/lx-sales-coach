@@ -16,6 +16,9 @@
   "update": {
     "compare_fields": ["version", "integrity.references"],
     "endpoint": "https://raw.githubusercontent.com/sky-6688-lap/lx-sales-coach/main/version.json",
+    "endpoint_fallback": "https://api.github.com/repos/sky-6688-lap/lx-sales-coach/contents/version.json",
+    "endpoint_fallback_headers": {"Accept": "application/vnd.github.raw+json"},
+    "policy": "先读 endpoint；网络、SSL 或代理失败时改读 endpoint_fallback（公开仓库免鉴权）；两者都读不到才回复 on_mismatch",
     "on_match": "已更新到最新版本",
     "on_mismatch": "更新未成功",
     "on_incomplete": "安装不完整，请重新拉取完整包"

@@ -7,7 +7,9 @@
 - Repository: https://github.com/sky-6688-lap/lx-sales-coach
 - Machine-readable: version.json（更新时比对的唯一对象）
 
-当用户要求更新本 Skill 时，Agent 应读取仓库 main 分支上的 `version.json`，比较其中的 `version` 与 `integrity.references` 两项与本地是否一致：**两项都一致**才回复「已更新到最新版本」，不一致回复「更新未成功」，不要用术语增加用户负担。`commit` 与 `released` 只用于追溯发布内容，不拿它们判断是否需要更新。
+当用户要求更新本 Skill 时，Agent 应读取仓库 main 分支上的 `version.json`，比较其中的 `version` 与 `integrity.references` 两项与本地是否一致：**两项都一致**才回复「已更新到最新版本」，不一致回复「更新未成功」，不要用术语增加用户负担。
+
+读取顺序按 `version.json` 的 `update.policy`：先读 `endpoint`（raw 域名，无限流）；若网络、SSL 或代理导致读不到，改读 `endpoint_fallback`（GitHub Contents API，公开仓库免鉴权，请求头见 `endpoint_fallback_headers`）；两者都失败才算「更新未成功」。**不要只试一次就下结论**。发布内容与 commit 以同名 Release tag 为准，版本文件不自引用 commit，避免循环依赖。
 
 如果本地 `references/` 篇数少于 `version.json` 的 `integrity.references`，或本地 markdown 字符数明显低于 `integrity.min_chars`，说明安装不完整，应回复「安装不完整，请重新拉取完整包」，不要按残缺版继续使用。
 

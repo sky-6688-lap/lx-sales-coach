@@ -223,8 +223,8 @@
 
 - 输入：「把已安装的 lx-sales-coach 更新到最新版。」
 - 覆盖规则：VERSION.md 更新逻辑 + `version.json` 的 `update.compare_fields`。
-- 期望行为：读取仓库 main 分支 `version.json`，比对 `version` 与 `integrity.references` 两项；都一致只回「已更新到最新版本」，不一致回「更新未成功」；篇数或字符数明显不足回「安装不完整，请重新拉取完整包」。
-- 禁止行为：只看本地文件修改时间；用 `commit` / `released` 判新旧；把术语堆给用户。
+- 期望行为：按 `update.policy` 先读 raw `endpoint`，失败则改读 `endpoint_fallback`（Contents API，免鉴权）再判断；比对 `version` 与 `integrity.references` 两项，都一致只回「已更新到最新版本」，不一致回「更新未成功」；篇数或字符数明显不足回「安装不完整，请重新拉取完整包」。
+- 禁止行为：只看本地文件修改时间；用 `commit` / `released` 判新旧；raw 域名一次读不到就直接判「更新未成功」；把术语堆给用户。
 
 ## 33. canary runner 与跨平台检查
 

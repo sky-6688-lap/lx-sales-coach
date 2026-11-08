@@ -104,7 +104,7 @@ lx-sales-coach/
 
 | 机制 | 文件 | 作用 |
 |---|---|---|
-| 机器可读版本 | `version.json` | 声明版本、篇数、字符与字节下限；Agent 更新时比对 `version` 与 `integrity.references`，不再靠人读 VERSION.md 猜新旧 |
+| 机器可读版本 | `version.json` | 声明版本、篇数、字符与字节下限；Agent 更新时比对 `version` 与 `integrity.references`，不再靠人读 VERSION.md 猜新旧；raw 域名读不到时自动走 Contents API 备用端点 |
 | 发布校验 | `scripts/verify-release.sh` | 结构 / frontmatter / 悬空链接 / 红线 / 版本一致 / 全库可达性 / 索引覆盖 / 深挖指引 / 成品消息长度 / 规则一致性 / 内容规模 |
 | Canary 回归 | `tests/canary-cases.json` + `scripts/run-canary.py` | 每篇一条真实业务问句，硬检查落点存在、在精确寻址表与速查表中均被点名、问句不重复；`--emit-prompts` 生成可在 Agent 里逐条实测的提示词 |
 | 持续集成 | `.github/workflows/ci.yml` | push / PR 时自动跑上面三项 + 兼容检查 + JSON 解析 |
