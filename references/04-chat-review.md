@@ -69,4 +69,5 @@
 | 做四周复盘 | [74 weekly-review-examples](74-weekly-review-examples.md) |
 | 逐轮解剖一整段对话 | [77 conversation-anatomy](77-conversation-anatomy.md) |
 
+| 要把四周结果连起来看数字 | [95 每周数字](95-worksheet-weekly-metrics.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

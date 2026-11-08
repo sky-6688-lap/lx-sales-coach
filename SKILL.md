@@ -85,7 +85,7 @@ metadata:
 
 **S3 再分流**：价格类（贵 / 砍价 / 预算不够 / 别家便宜）→ [05-objection-price.md](references/05-objection-price.md)；决策类（考虑一下 / 商量 / 对比 / 再看看 / 过阵子）→ [06-objection-decision.md](references/06-objection-decision.md)；信任类与冷场（怕没效果 / 没听过你 / 突然变冷 / 只想白问）→ [07-objection-trust.md](references/07-objection-trust.md)。
 
-**细分模块地图（共 81 篇，编号 00–80）**
+**细分模块地图（共 97 篇，编号 00–96）**
 
 | 区间 | 覆盖 |
 |---|---|
@@ -101,6 +101,10 @@ metadata:
 | 57–61 | 心力与内容深化：报价练习、分级时间、内容获客、速查补编、成文模板 |
 | 62–75 | 实战工具箱：行业走单、消息库 40 条、异议矩阵、30 天日历、替换词典、角色演练、八张检查表、反面案例、长周期、低客单、公开场景、交接模板、四周复盘、运行时疑难 |
 | 76–80 | 总览与索引：系统总览、完整对话解剖、设计取舍、30 天练习、术语表与全库索引 |
+| 81–84 | 渠道与媒介：微信语音与文字、社媒平台、群与直播、电话语音 |
+| 85–88 | 履约与争议：范围变更、改期延期、退款争议、尾款与发票 |
+| 89–92 | 客户关系类型：熟人介绍、多人决策、老客复联、客户发火 |
+| 93–96 | 可填写工作表：一单一卡、产品阶梯与报价表、每周数字、消息填空模板 |
 
 **逐状态精确寻址表**（这张表只用来找文件，不是让你把列出来的都读一遍）
 
@@ -124,6 +128,10 @@ metadata:
 | 复盘 / 归因 | [04](references/04-chat-review.md) | [31 丢单归因](references/31-lost-deal-attribution.md) / [69 反面案例](references/69-failure-cases.md) / [74 四周复盘](references/74-weekly-review-examples.md) / [77 对话解剖](references/77-conversation-anatomy.md) |
 | 总控 / 边界 | [00](references/00-router.md) | [17 门禁](references/17-gate-playbook.md) / [18 判定案例](references/18-state-judgment-cases.md) / [19 风格改写](references/19-message-style-rewrites.md) / [20 四段式示例](references/20-four-part-answer-examples.md) / [21 红线全集](references/21-boundaries-and-compliance.md) / [76 总览](references/76-sales-system-overview.md) / [78 设计取舍](references/78-principles-and-tradeoffs.md) / [80 索引](references/80-glossary-and-index.md) |
 | 出消息前自检 | [15](references/15-message-checklist.md) | [68 检查表合集](references/68-checklist-bundle.md) |
+| 渠道与媒介（语音 / 私信 / 群 / 电话） | [14](references/14-quick-answers.md) / [16](references/16-content-writing.md) | [81 微信语音](references/81-channel-wechat.md) / [82 社媒平台](references/82-channel-social-platforms.md) / [83 群与直播](references/83-channel-group-and-live.md) / [84 电话语音](references/84-channel-voice-and-call.md) |
+| 履约、变更与争议 | [11](references/11-after-sale.md) | [85 范围变更](references/85-scope-creep.md) / [86 改期延期](references/86-reschedule-and-delay.md) / [87 退款争议](references/87-refund-and-dispute.md) / [88 尾款发票](references/88-final-payment-and-invoice.md) / [92 客户发火](references/92-angry-client-recovery.md) |
+| 客户关系类型 | [06](references/06-objection-decision.md) / [11](references/11-after-sale.md) | [89 熟人介绍](references/89-referral-from-friends.md) / [90 多人决策](references/90-multi-decision-makers.md) / [91 老客复联](references/91-dormant-client-revisit.md) |
+| 要能填写的工作表 | [15](references/15-message-checklist.md) | [93 一单一卡](references/93-worksheet-deal-card.md) / [94 阶梯报价表](references/94-worksheet-offer-ladder.md) / [95 每周数字](references/95-worksheet-weekly-metrics.md) / [96 消息拼装](references/96-worksheet-message-builder.md) |
 
 按问题反查用 [80-glossary-and-index.md](references/80-glossary-and-index.md)。**一次只读 1–2 篇的规则不变**：细分篇是补充判断依据，不是要一起加载的材料。
 
@@ -174,7 +182,7 @@ metadata:
 
 ## 八、目录结构
 
-`references/` 共 **81 篇**，编号 00–80 连续，扁平存放，按状态与主题区间分组：
+`references/` 共 **97 篇**，编号 00–96 连续，扁平存放，按状态与主题区间分组：
 
 ```
 00        总路由
@@ -192,9 +200,13 @@ metadata:
           替换词典 / 角色演练 / 检查表 / 反面案例 / 长周期 / 低客单 /
           公开场景 / 交接模板 / 四周复盘 / 运行时疑难
 76–80     总览与索引：系统总览 / 对话解剖 / 设计取舍 / 30 天练习 / 术语表与全库索引
+81–84     渠道与媒介：微信语音 / 社媒平台 / 群与直播 / 电话语音
+85–88     履约与争议：范围变更 / 改期延期 / 退款争议 / 尾款发票
+89–92     客户关系类型：熟人介绍 / 多人决策 / 老客复联 / 客户发火
+93–96     可填写工作表：一单一卡 / 阶梯报价表 / 每周数字 / 消息拼装
 ```
 
-完整文件名与「按问题查文件」对照见 [80-glossary-and-index.md](references/80-glossary-and-index.md)。新增或改名文件后，必须同步更新 00、80 与本节的分组说明。
+完整文件名与「按问题查文件」对照见 [80-glossary-and-index.md](references/80-glossary-and-index.md)（含 97 篇逐篇速查表）。新增或改名文件后，必须同步更新 00、80、本节的分组与精确寻址表、17 篇主链路的深挖指引，以及 `tests/canary-cases.json` 与 `version.json` 的篇数基线；发布校验与 canary runner 会检查可达性。
 
 ## 九、使用建议
 
@@ -203,3 +215,4 @@ metadata:
 - 用户问得越具体（卖什么 / 价格带 / 上次停在哪 / 客户原话），成品越可用；缺什么就按第三节反问，但只问一轮。
 - 涉及批量文案时，先确认条数、发布场景和禁用表述，再按 16 与 61 的模板出稿；不要一次给 50 条同质内容。
 - 遇到「不确定能不能给」的边界情况，查 [75-faq-for-agent.md](references/75-faq-for-agent.md)；边界说明必须配一个可执行的替代动作。
+- 需要把判断落成可填写的表，走 93–96：一单一卡、产品阶梯与报价表、每周数字、消息拼装模板；工作表是产出物，不是要一起加载的材料。

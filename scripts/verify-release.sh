@@ -11,6 +11,7 @@ fi
 
 "$PY" - "$repo_root" <<'PY'
 from pathlib import Path
+import json
 import re
 import sys
 
@@ -18,12 +19,31 @@ root = Path(sys.argv[1])
 errors = []
 warnings = []
 
+# 0. 机器可读基线：篇数与规模从这里读，扩写内容时只改 version.json
+meta_path = root / "version.json"
+if meta_path.is_file():
+    try:
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        errors.append(f"version.json 无法解析：{exc}")
+        meta = {}
+else:
+    meta = {}
+integ = meta.get("integrity", {})
+expected = integ.get("references")
+min_chars = integ.get("min_chars", 160000)
+min_bytes = integ.get("min_bytes", 390000)
+if expected is None:
+    errors.append("version.json 缺少 integrity.references")
+
 # 1. 必需文件
 required = [
-    "SKILL.md", "README.md", "VERSION.md", "CHANGELOG.md", "LICENSE",
-    "agents/openai.yaml",
-    "tests/test-cases.md", "tests/regression-checklist.md",
-    "scripts/verify-release.sh", "scripts/install-local.sh",
+    "SKILL.md", "README.md", "VERSION.md", "CHANGELOG.md", "LICENSE", "version.json",
+    "agents/openai.yaml", ".gitignore", ".github/workflows/ci.yml",
+    "tests/test-cases.md", "tests/regression-checklist.md", "tests/canary-cases.json",
+    "tests/platform-smoke.md",
+    "scripts/verify-release.sh", "scripts/install-local.sh", "scripts/run-canary.py",
+    "scripts/check-compat.py", "scripts/platform-smoke.sh",
 ]
 for rel in required:
     if not (root / rel).is_file():
@@ -57,12 +77,12 @@ else:
 # 3. references 数量与规模
 ref_dir = root / "references"
 refs = sorted(ref_dir.glob("*.md")) if ref_dir.is_dir() else []
-if len(refs) != 81:
-    errors.append(f"references 应有 81 篇，实际 {len(refs)} 篇")
+if expected and len(refs) != expected:
+    errors.append(f"references 应为 version.json 声明的 {expected} 篇，实际 {len(refs)} 篇")
 nums = sorted(int(p.name.split("-")[0]) for p in refs if "-" in p.name and p.name[:2].isdigit())
-if nums != list(range(81)):
-    missing = sorted(set(range(81)) - set(nums))
-    errors.append(f"references 编号应为 00–80 连续，缺号：{missing}")
+if expected and nums != list(range(expected)):
+    missing = sorted(set(range(expected)) - set(nums))
+    errors.append(f"references 编号应为 00–{expected-1:02d} 连续，缺号：{missing}")
 
 all_md = [p for p in root.rglob("*.md") if ".git" not in p.parts]
 for p in all_md:
@@ -116,8 +136,26 @@ changelog = (root / "CHANGELOG.md").read_text(encoding="utf-8") if (root / "CHAN
 m = re.search(r"Version:\s*(v[\d.]+)", version)
 if not m:
     errors.append("VERSION.md 缺少版本号")
-elif m.group(1) not in changelog:
-    errors.append("CHANGELOG.md 没有对应版本的记录")
+else:
+    if m.group(1) not in changelog:
+        errors.append("CHANGELOG.md 没有对应版本的记录")
+    if meta.get("version") and m.group(1) != meta["version"]:
+        errors.append(f"VERSION.md 的 {m.group(1)} 与 version.json 的 {meta['version']} 不一致")
+    if m.group(1) not in (root / "README.md").read_text(encoding="utf-8", errors="ignore") and "已更新到" + m.group(1) not in version:
+        warnings.append("README 未直接出现版本号（通过 VERSION.md 跳转，可接受）")
+if not meta.get("version"):
+    errors.append("version.json 缺少 version")
+if not meta.get("integrity", {}).get("min_chars"):
+    errors.append("version.json 缺少内容规模基线")
+# canary 条数与声明篇数一致（详细落点检查由 run-canary.py 负责）
+canary_path = root / "tests" / "canary-cases.json"
+if canary_path.is_file():
+    try:
+        canary = json.loads(canary_path.read_text(encoding="utf-8"))
+        if expected and len(canary.get("cases", [])) != expected:
+            errors.append(f"canary 条数 {len(canary.get('cases', []))} 与声明的 {expected} 篇不一致")
+    except json.JSONDecodeError as exc:
+        errors.append(f"canary-cases.json 无法解析：{exc}")
 
 # 8. 可达性：81 篇不能出现「写了但永远读不到」的死文件
 skill_text = (root / "SKILL.md").read_text(encoding="utf-8") if (root / "SKILL.md").is_file() else ""
@@ -149,9 +187,11 @@ if "四段式，缺一不可" in skill_text:
 if "门禁 = 三件事 + 一句客户原话" not in skill_text:
     errors.append("SKILL.md 门禁四项口径未统一")
 readme = (root / "README.md").read_text(encoding="utf-8") if (root / "README.md").is_file() else ""
-for token in ("17–75", "76–80"):
+for token in ("17–75", "76–80", "81–96"):
     if token not in readme:
         errors.append(f"README 分组与 SKILL/00 不一致，缺少「{token}」")
+if "version.json" not in readme:
+    errors.append("README 未说明机器可读版本文件 version.json")
 
 # 10. 成品示例消息长度：示例就是标准，不能自己违反六条风格规则
 skip_markers = (".md", "模板示例", "状态 S", "SKILL.md")
@@ -172,8 +212,10 @@ if long_msgs:
 # 11. 统计
 total_chars = sum(len(p.read_text(encoding="utf-8")) for p in all_md)
 total_bytes = sum(p.stat().st_size for p in root.rglob("*") if p.is_file())
-if total_chars < 160000:
-    errors.append(f"内容规模不足：{total_chars:,} 字符，应不低于 16 万字符")
+if total_chars < min_chars:
+    errors.append(f"内容规模不足：{total_chars:,} 字符，应不低于 version.json 声明的 {min_chars:,}")
+if total_bytes < min_bytes:
+    errors.append(f"内容规模不足：{total_bytes:,} 字节，应不低于 version.json 声明的 {min_bytes:,}")
 print(f"检查文件：{len(all_md)} 个 markdown，references {len(refs)} 篇，约 {total_chars:,} 字符 / {total_bytes:,} 字节")
 
 for w in warnings:
@@ -183,5 +225,5 @@ if errors:
         print(f"[失败] {e}", file=sys.stderr)
     print(f"校验失败：{len(errors)} 项", file=sys.stderr)
     sys.exit(1)
-print("校验通过：结构 / frontmatter / 链接 / 红线关键词 / 版本一致 / 81 篇可达性 / 索引覆盖 / 示例消息长度 / 规则一致性")
+print(f"校验通过：结构 / frontmatter / 链接 / 红线关键词 / 版本一致 / {len(refs)} 篇可达性 / 索引覆盖 / 示例消息长度 / 规则一致性")
 PY

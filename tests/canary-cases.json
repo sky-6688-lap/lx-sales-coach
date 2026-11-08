@@ -1,0 +1,877 @@
+{
+  "schema": 1,
+  "note": "每条 canary 是一条真实业务问句。runner 硬检查：期望文件存在、编号与 id 一致、在 SKILL.md 精确寻址表与 80 全库速查表中均被点名、问句不重复。关键词命中为提示项（不判失败）。语义路由是否真的命中，需用 --emit-prompts 生成的提示词在 Agent 运行时实测。",
+  "cases": [
+    {
+      "id": "00",
+      "question": "客户三天没理我，也说不清是哪一步出的问题，先判什么",
+      "expect": "00-router.md",
+      "keywords": [
+        "状态",
+        "判定"
+      ]
+    },
+    {
+      "id": "01",
+      "question": "我一开口就介绍自己资历，客户没反应，第一句怎么改",
+      "expect": "01-value-and-positioning.md",
+      "keywords": [
+        "卖点",
+        "价值"
+      ]
+    },
+    {
+      "id": "02",
+      "question": "客户还没问价，我现在该不该主动报",
+      "expect": "02-pricing-and-quote.md",
+      "keywords": [
+        "报价",
+        "价格"
+      ]
+    },
+    {
+      "id": "03",
+      "question": "聊了半小时还是不知道客户到底想解决什么",
+      "expect": "03-needs-diagnosis.md",
+      "keywords": [
+        "需求",
+        "提问"
+      ]
+    },
+    {
+      "id": "04",
+      "question": "贴一段聊天记录，帮我找这单断在哪",
+      "expect": "04-chat-review.md",
+      "keywords": [
+        "断点",
+        "复盘"
+      ]
+    },
+    {
+      "id": "05",
+      "question": "客户说太贵了，怎么接",
+      "expect": "05-objection-price.md",
+      "keywords": [
+        "贵",
+        "价格"
+      ]
+    },
+    {
+      "id": "06",
+      "question": "客户说再考虑一下，是真要比较还是委婉收尾",
+      "expect": "06-objection-decision.md",
+      "keywords": [
+        "考虑",
+        "决策"
+      ]
+    },
+    {
+      "id": "07",
+      "question": "客户问没效果怎么办，我又不能保证",
+      "expect": "07-objection-trust.md",
+      "keywords": [
+        "效果",
+        "信任"
+      ]
+    },
+    {
+      "id": "08",
+      "question": "跟进几次算合适，什么时候该停",
+      "expect": "08-follow-up-rhythm.md",
+      "keywords": [
+        "跟进",
+        "止损"
+      ]
+    },
+    {
+      "id": "09",
+      "question": "报价后三天没回，要不要再发一条",
+      "expect": "09-silent-reactivation.md",
+      "keywords": [
+        "沉默",
+        "激活"
+      ]
+    },
+    {
+      "id": "10",
+      "question": "意向挺明确，就差让他付定金，怎么开口",
+      "expect": "10-close-and-deposit.md",
+      "keywords": [
+        "定金",
+        "收口"
+      ]
+    },
+    {
+      "id": "11",
+      "question": "交付做完了，怎么自然地提复购",
+      "expect": "11-after-sale.md",
+      "keywords": [
+        "复购",
+        "转介绍"
+      ]
+    },
+    {
+      "id": "12",
+      "question": "一报价就心虚，尤其跟熟人",
+      "expect": "12-mindset.md",
+      "keywords": [
+        "不敢",
+        "收钱"
+      ]
+    },
+    {
+      "id": "13",
+      "question": "客户多了顾不过来，怎么分级",
+      "expect": "13-operations.md",
+      "keywords": [
+        "分级",
+        "时间"
+      ]
+    },
+    {
+      "id": "14",
+      "question": "别问了，给我一句能发的",
+      "expect": "14-quick-answers.md",
+      "keywords": [
+        "速查",
+        "占位"
+      ]
+    },
+    {
+      "id": "15",
+      "question": "发之前帮我检查这条消息有没有问题",
+      "expect": "15-message-checklist.md",
+      "keywords": [
+        "检查",
+        "自检"
+      ]
+    },
+    {
+      "id": "16",
+      "question": "帮我写 5 条不发硬广的朋友圈",
+      "expect": "16-content-writing.md",
+      "keywords": [
+        "文案",
+        "内容"
+      ]
+    },
+    {
+      "id": "17",
+      "question": "用户只给了一半背景，门禁该怎么问",
+      "expect": "17-gate-playbook.md",
+      "keywords": [
+        "门禁",
+        "三件事"
+      ]
+    },
+    {
+      "id": "18",
+      "question": "有没有状态判错的对照案例",
+      "expect": "18-state-judgment-cases.md",
+      "keywords": [
+        "判定",
+        "案例"
+      ]
+    },
+    {
+      "id": "19",
+      "question": "我写的话读起来像念稿，怎么改",
+      "expect": "19-message-style-rewrites.md",
+      "keywords": [
+        "改写",
+        "风格"
+      ]
+    },
+    {
+      "id": "20",
+      "question": "四段式回答长什么样，给个完整例子",
+      "expect": "20-four-part-answer-examples.md",
+      "keywords": [
+        "四段式",
+        "示例"
+      ]
+    },
+    {
+      "id": "21",
+      "question": "这句能不能给，边界在哪",
+      "expect": "21-boundaries-and-compliance.md",
+      "keywords": [
+        "红线",
+        "边界"
+      ]
+    },
+    {
+      "id": "22",
+      "question": "一句话说清我卖的是什么，那三格怎么填",
+      "expect": "22-one-sentence-examples.md",
+      "keywords": [
+        "一句",
+        "三格"
+      ]
+    },
+    {
+      "id": "23",
+      "question": "刚加上微信第一句怎么发",
+      "expect": "23-first-contact-scenarios.md",
+      "keywords": [
+        "首次",
+        "开口"
+      ]
+    },
+    {
+      "id": "24",
+      "question": "定价总没底气，价格结构怎么搭",
+      "expect": "24-pricing-logic.md",
+      "keywords": [
+        "定价",
+        "结构"
+      ]
+    },
+    {
+      "id": "25",
+      "question": "客户还没问价，我要不要主动报",
+      "expect": "25-quote-timing.md",
+      "keywords": [
+        "时机",
+        "报价"
+      ]
+    },
+    {
+      "id": "26",
+      "question": "客户要一页方案，怎么写",
+      "expect": "26-proposal-templates.md",
+      "keywords": [
+        "提案",
+        "方案"
+      ]
+    },
+    {
+      "id": "27",
+      "question": "客户要便宜点，让价怎么换范围",
+      "expect": "27-discount-and-price-change.md",
+      "keywords": [
+        "折扣",
+        "范围"
+      ]
+    },
+    {
+      "id": "28",
+      "question": "有没有现成的提问句可以用",
+      "expect": "28-question-bank.md",
+      "keywords": [
+        "提问",
+        "问句"
+      ]
+    },
+    {
+      "id": "29",
+      "question": "怎么分辨客户是真想买还是随口问问",
+      "expect": "29-fake-needs-in-detail.md",
+      "keywords": [
+        "伪需求",
+        "信号"
+      ]
+    },
+    {
+      "id": "30",
+      "question": "聊完想把诊断结果记下来，用啥表",
+      "expect": "30-diagnosis-records.md",
+      "keywords": [
+        "记录",
+        "诊断"
+      ]
+    },
+    {
+      "id": "31",
+      "question": "这单最后没成，到底丢在哪",
+      "expect": "31-lost-deal-attribution.md",
+      "keywords": [
+        "丢单",
+        "归因"
+      ]
+    },
+    {
+      "id": "32",
+      "question": "客户说的词我该怎么用到消息里",
+      "expect": "32-customer-language.md",
+      "keywords": [
+        "原词",
+        "客户"
+      ]
+    },
+    {
+      "id": "33",
+      "question": "先分清这句异议属于哪一类",
+      "expect": "33-objection-taxonomy.md",
+      "keywords": [
+        "分类",
+        "异议"
+      ]
+    },
+    {
+      "id": "34",
+      "question": "客户说预算只有一半",
+      "expect": "34-price-budget.md",
+      "keywords": [
+        "预算"
+      ]
+    },
+    {
+      "id": "35",
+      "question": "客户觉得不值这个价",
+      "expect": "35-price-value-uncertainty.md",
+      "keywords": [
+        "不值",
+        "价值"
+      ]
+    },
+    {
+      "id": "36",
+      "question": "客户拿别家便宜一半来比",
+      "expect": "36-competitor-comparison.md",
+      "keywords": [
+        "比价",
+        "同行"
+      ]
+    },
+    {
+      "id": "37",
+      "question": "客户直接砍价，怎么接不秒降",
+      "expect": "37-haggling-scripts.md",
+      "keywords": [
+        "砍价",
+        "让价"
+      ]
+    },
+    {
+      "id": "38",
+      "question": "「考虑一下」「跟家人商量」「再看看」有区别吗",
+      "expect": "38-decision-variants.md",
+      "keywords": [
+        "变体",
+        "商量"
+      ]
+    },
+    {
+      "id": "39",
+      "question": "客户要我保证效果",
+      "expect": "39-trust-and-guarantees.md",
+      "keywords": [
+        "保证",
+        "兜底"
+      ]
+    },
+    {
+      "id": "40",
+      "question": "一直免费问、突然变冷，怎么办",
+      "expect": "40-coldness-and-free-asking.md",
+      "keywords": [
+        "白问",
+        "冷场"
+      ]
+    },
+    {
+      "id": "41",
+      "question": "跟进到底该守什么原则",
+      "expect": "41-followup-principles.md",
+      "keywords": [
+        "原则",
+        "跟进"
+      ]
+    },
+    {
+      "id": "42",
+      "question": "199 和 9800 的单，跟进节奏一样吗",
+      "expect": "42-rhythm-by-price-band.md",
+      "keywords": [
+        "节奏",
+        "价格带"
+      ]
+    },
+    {
+      "id": "43",
+      "question": "三次跟进分别给什么",
+      "expect": "43-three-touchpoints.md",
+      "keywords": [
+        "触点",
+        "三次"
+      ]
+    },
+    {
+      "id": "44",
+      "question": "发过三次都没回，什么时候能再出现",
+      "expect": "44-stop-loss-and-reentry.md",
+      "keywords": [
+        "止损",
+        "重启"
+      ]
+    },
+    {
+      "id": "45",
+      "question": "客户没回，到底是嫌贵、在忙还是拒绝",
+      "expect": "45-silent-attribution.md",
+      "keywords": [
+        "归因",
+        "沉默"
+      ]
+    },
+    {
+      "id": "46",
+      "question": "有没有能直接发的激活消息",
+      "expect": "46-reactivation-library.md",
+      "keywords": [
+        "消息库",
+        "激活"
+      ]
+    },
+    {
+      "id": "47",
+      "question": "跟进里最容易犯的错有哪些",
+      "expect": "47-followup-mistakes.md",
+      "keywords": [
+        "错误",
+        "禁忌"
+      ]
+    },
+    {
+      "id": "48",
+      "question": "临门收口只要三句，哪三句",
+      "expect": "48-close-three-sentences.md",
+      "keywords": [
+        "三句",
+        "收口"
+      ]
+    },
+    {
+      "id": "49",
+      "question": "定金能不能退，条款怎么定",
+      "expect": "49-deposit-rules.md",
+      "keywords": [
+        "定金",
+        "退还"
+      ]
+    },
+    {
+      "id": "50",
+      "question": "收完钱第一句说什么",
+      "expect": "50-after-payment.md",
+      "keywords": [
+        "收款",
+        "第一句"
+      ]
+    },
+    {
+      "id": "51",
+      "question": "不想施压，还有什么办法推进",
+      "expect": "51-no-pressure-closing.md",
+      "keywords": [
+        "施压",
+        "推进"
+      ]
+    },
+    {
+      "id": "52",
+      "question": "交付期每个节点怎么铺垫",
+      "expect": "52-delivery-checkpoints.md",
+      "keywords": [
+        "交付",
+        "节点"
+      ]
+    },
+    {
+      "id": "53",
+      "question": "老客续费想涨价，怎么开口",
+      "expect": "53-renewal-and-price-change.md",
+      "keywords": [
+        "续费",
+        "涨价"
+      ]
+    },
+    {
+      "id": "54",
+      "question": "什么时候开口要转介绍",
+      "expect": "54-referral-timing-and-scripts.md",
+      "keywords": [
+        "转介绍",
+        "时机"
+      ]
+    },
+    {
+      "id": "55",
+      "question": "转介绍要不要给答谢或分佣",
+      "expect": "55-referral-rewards-and-cps.md",
+      "keywords": [
+        "答谢",
+        "分佣"
+      ]
+    },
+    {
+      "id": "56",
+      "question": "想用客户好评，授权怎么拿",
+      "expect": "56-testimonials-and-authorization.md",
+      "keywords": [
+        "授权",
+        "口碑"
+      ]
+    },
+    {
+      "id": "57",
+      "question": "不敢报价，有没有专项练习",
+      "expect": "57-fear-of-charging-drills.md",
+      "keywords": [
+        "练习",
+        "报价"
+      ]
+    },
+    {
+      "id": "58",
+      "question": "手上单子多，时间怎么分",
+      "expect": "58-client-grading-and-time.md",
+      "keywords": [
+        "时间",
+        "分级"
+      ]
+    },
+    {
+      "id": "59",
+      "question": "没什么人来问，写什么内容能带来咨询",
+      "expect": "59-inbound-content.md",
+      "keywords": [
+        "获客",
+        "内容"
+      ]
+    },
+    {
+      "id": "60",
+      "question": "有个速查里没覆盖的高频短问",
+      "expect": "60-quick-answers-extra.md",
+      "keywords": [
+        "速查",
+        "高频"
+      ]
+    },
+    {
+      "id": "61",
+      "question": "批量出文案，模板长什么样",
+      "expect": "61-content-templates.md",
+      "keywords": [
+        "模板",
+        "成文"
+      ]
+    },
+    {
+      "id": "62",
+      "question": "我是做设计的，这类单怎么走",
+      "expect": "62-industry-playbooks.md",
+      "keywords": [
+        "行业",
+        "走单"
+      ]
+    },
+    {
+      "id": "63",
+      "question": "有没有一批成品消息可以直接改",
+      "expect": "63-chat-script-library.md",
+      "keywords": [
+        "消息库",
+        "成品"
+      ]
+    },
+    {
+      "id": "64",
+      "question": "异议应答有没有一句一句的矩阵",
+      "expect": "64-objection-response-matrix.md",
+      "keywords": [
+        "矩阵",
+        "应答"
+      ]
+    },
+    {
+      "id": "65",
+      "question": "给我一张 30 天跟进日历",
+      "expect": "65-followup-calendar.md",
+      "keywords": [
+        "日历",
+        "30"
+      ]
+    },
+    {
+      "id": "66",
+      "question": "把示例里的行业词换成我自己的",
+      "expect": "66-scenario-replacements.md",
+      "keywords": [
+        "替换",
+        "行业"
+      ]
+    },
+    {
+      "id": "67",
+      "question": "想练角色扮演，怎么练",
+      "expect": "67-roleplay-drills.md",
+      "keywords": [
+        "演练",
+        "角色"
+      ]
+    },
+    {
+      "id": "68",
+      "question": "有没有成套的检查表",
+      "expect": "68-checklist-bundle.md",
+      "keywords": [
+        "检查表"
+      ]
+    },
+    {
+      "id": "69",
+      "question": "别人踩过的坑，列一批反面案例",
+      "expect": "69-failure-cases.md",
+      "keywords": [
+        "反面",
+        "案例"
+      ]
+    },
+    {
+      "id": "70",
+      "question": "万元级方案要走两三个月，怎么跟",
+      "expect": "70-long-cycle-deals.md",
+      "keywords": [
+        "长周期",
+        "节点"
+      ]
+    },
+    {
+      "id": "71",
+      "question": "199 的文档还要做重型谈单吗",
+      "expect": "71-low-price-deals.md",
+      "keywords": [
+        "低客单",
+        "极简"
+      ]
+    },
+    {
+      "id": "72",
+      "question": "群里有人当众问报价，我不想公开价格",
+      "expect": "72-group-and-public-scenarios.md",
+      "keywords": [
+        "公开",
+        "群"
+      ]
+    },
+    {
+      "id": "73",
+      "question": "把这单交给同事接手，怎么交接",
+      "expect": "73-handover-templates.md",
+      "keywords": [
+        "交接",
+        "模板"
+      ]
+    },
+    {
+      "id": "74",
+      "question": "四周经营复盘怎么做",
+      "expect": "74-weekly-review-examples.md",
+      "keywords": [
+        "复盘",
+        "四周"
+      ]
+    },
+    {
+      "id": "75",
+      "question": "运行时拿不准的疑难去哪查",
+      "expect": "75-faq-for-agent.md",
+      "keywords": [
+        "疑难",
+        "FAQ"
+      ]
+    },
+    {
+      "id": "76",
+      "question": "这套系统整体怎么组织的",
+      "expect": "76-sales-system-overview.md",
+      "keywords": [
+        "总览",
+        "系统"
+      ]
+    },
+    {
+      "id": "77",
+      "question": "逐轮解剖一整段对话",
+      "expect": "77-conversation-anatomy.md",
+      "keywords": [
+        "解剖",
+        "对话"
+      ]
+    },
+    {
+      "id": "78",
+      "question": "为什么一次只读一两篇",
+      "expect": "78-principles-and-tradeoffs.md",
+      "keywords": [
+        "取舍",
+        "设计"
+      ]
+    },
+    {
+      "id": "79",
+      "question": "给自己排个 30 天练习计划",
+      "expect": "79-self-practice-plan.md",
+      "keywords": [
+        "练习",
+        "30"
+      ]
+    },
+    {
+      "id": "80",
+      "question": "按我现在的问题反查该读哪篇",
+      "expect": "80-glossary-and-index.md",
+      "keywords": [
+        "索引",
+        "速查"
+      ]
+    },
+    {
+      "id": "81",
+      "question": "客户发了条 60 秒语音，我该回语音还是文字",
+      "expect": "81-channel-wechat.md",
+      "keywords": [
+        "语音",
+        "微信"
+      ]
+    },
+    {
+      "id": "82",
+      "question": "小红书评论区有人问价，怎么引到私信",
+      "expect": "82-channel-social-platforms.md",
+      "keywords": [
+        "评论",
+        "私信"
+      ]
+    },
+    {
+      "id": "83",
+      "question": "直播连麦时有人当众问价，怎么不在群里报数字",
+      "expect": "83-channel-group-and-live.md",
+      "keywords": [
+        "群",
+        "公开"
+      ]
+    },
+    {
+      "id": "84",
+      "question": "电话里客户当场沉默了，怎么收",
+      "expect": "84-channel-voice-and-call.md",
+      "keywords": [
+        "电话",
+        "沉默"
+      ]
+    },
+    {
+      "id": "85",
+      "question": "客户中途加需求又不加钱，怎么说",
+      "expect": "85-scope-creep.md",
+      "keywords": [
+        "范围",
+        "加需求"
+      ]
+    },
+    {
+      "id": "86",
+      "question": "客户约好的时间一改再改，怎么办",
+      "expect": "86-reschedule-and-delay.md",
+      "keywords": [
+        "改期",
+        "延期"
+      ]
+    },
+    {
+      "id": "87",
+      "question": "客户做完说不满意要退款",
+      "expect": "87-refund-and-dispute.md",
+      "keywords": [
+        "退款",
+        "争议"
+      ]
+    },
+    {
+      "id": "88",
+      "question": "尾款拖着不给，怎么提醒",
+      "expect": "88-final-payment-and-invoice.md",
+      "keywords": [
+        "尾款",
+        "发票"
+      ]
+    },
+    {
+      "id": "89",
+      "question": "朋友介绍来的客户，能不能按熟人价",
+      "expect": "89-referral-from-friends.md",
+      "keywords": [
+        "熟人",
+        "转介绍"
+      ]
+    },
+    {
+      "id": "90",
+      "question": "客户说要跟合伙人一起定，我该给什么",
+      "expect": "90-multi-decision-makers.md",
+      "keywords": [
+        "多人",
+        "决策"
+      ]
+    },
+    {
+      "id": "91",
+      "question": "半年前的老客户，现在还能不能联系",
+      "expect": "91-dormant-client-revisit.md",
+      "keywords": [
+        "老客",
+        "复购"
+      ]
+    },
+    {
+      "id": "92",
+      "question": "客户发火了，质疑我不专业",
+      "expect": "92-angry-client-recovery.md",
+      "keywords": [
+        "发火",
+        "投诉"
+      ]
+    },
+    {
+      "id": "93",
+      "question": "想给每单建一张能填的卡片",
+      "expect": "93-worksheet-deal-card.md",
+      "keywords": [
+        "卡片",
+        "档案"
+      ]
+    },
+    {
+      "id": "94",
+      "question": "产品阶梯和报价表怎么搭",
+      "expect": "94-worksheet-offer-ladder.md",
+      "keywords": [
+        "阶梯",
+        "报价表"
+      ]
+    },
+    {
+      "id": "95",
+      "question": "每周该看哪几个经营数字",
+      "expect": "95-worksheet-weekly-metrics.md",
+      "keywords": [
+        "数字",
+        "每周"
+      ]
+    },
+    {
+      "id": "96",
+      "question": "从零拼一条消息，有没有填空模板",
+      "expect": "96-worksheet-message-builder.md",
+      "keywords": [
+        "填空",
+        "拼"
+      ]
+    }
+  ]
+}

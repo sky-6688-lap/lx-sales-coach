@@ -96,4 +96,5 @@
 | 一直免费问、突然变冷 | [40 coldness-and-free-asking](40-coldness-and-free-asking.md) |
 | 想用口碑素材但要先拿授权 | [56 testimonials-and-authorization](56-testimonials-and-authorization.md) |
 
+| 客户发火、质疑不专业 | [92 客户发火](92-angry-client-recovery.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

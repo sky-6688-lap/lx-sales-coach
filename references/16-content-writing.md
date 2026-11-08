@@ -88,4 +88,7 @@
 | 把示例换成自己行业的词 | [66 scenario-replacements](66-scenario-replacements.md) |
 | 把文案交给别人接着写 | [73 handover-templates](73-handover-templates.md) |
 
+| 社媒平台的内容与私信承接 | [82 社媒平台](82-channel-social-platforms.md) |
+| 群里或直播当众被问价 | [83 群与直播](83-channel-group-and-live.md) |
+| 电话语音场景的口径 | [84 电话语音](84-channel-voice-and-call.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

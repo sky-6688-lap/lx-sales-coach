@@ -95,4 +95,5 @@
 | 检查自己有没有踩跟进错误 | [47 followup-mistakes](47-followup-mistakes.md) |
 | 三次之后该止损或重启 | [44 stop-loss-and-reentry](44-stop-loss-and-reentry.md) |
 
+| 电话里当场沉默了怎么收 | [84 电话语音](84-channel-voice-and-call.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

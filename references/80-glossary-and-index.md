@@ -1,6 +1,6 @@
 # 80 术语表与全库索引
 
-> 按「我遇到的问题」查文件。八十篇是查用的，不是读完的；找到对应行后只读那一到两篇。
+> 按「我遇到的问题」查文件。九十七篇是查用的，不是读完的；找到对应行后只读那一到两篇。
 
 ## 一、术语表
 
@@ -65,6 +65,22 @@
 | 想系统练三十天 | [79-self-practice-plan.md](79-self-practice-plan.md) | [76-sales-system-overview.md](76-sales-system-overview.md) |
 | 不确定某句能不能给 | [75-faq-for-agent.md](75-faq-for-agent.md) | [21-boundaries-and-compliance.md](21-boundaries-and-compliance.md) |
 | 想知道为什么这么设计 | [78-principles-and-tradeoffs.md](78-principles-and-tradeoffs.md) | [76-sales-system-overview.md](76-sales-system-overview.md) |
+| 客户发语音，我该回语音还是文字 | [81-channel-wechat.md](81-channel-wechat.md) | [84-channel-voice-and-call.md](84-channel-voice-and-call.md) |
+| 小红书评论区有人问价 | [82-channel-social-platforms.md](82-channel-social-platforms.md) | [59-inbound-content.md](59-inbound-content.md) |
+| 群里/直播当众被问价 | [83-channel-group-and-live.md](83-channel-group-and-live.md) | [72-group-and-public-scenarios.md](72-group-and-public-scenarios.md) |
+| 电话里客户突然沉默 | [84-channel-voice-and-call.md](84-channel-voice-and-call.md) | [09-silent-reactivation.md](09-silent-reactivation.md) |
+| 中途加需求又不加钱 | [85-scope-creep.md](85-scope-creep.md) | [27-discount-and-price-change.md](27-discount-and-price-change.md) |
+| 约好的时间一改再改 | [86-reschedule-and-delay.md](86-reschedule-and-delay.md) | [44-stop-loss-and-reentry.md](44-stop-loss-and-reentry.md) |
+| 客户做完说不满意要退款 | [87-refund-and-dispute.md](87-refund-and-dispute.md) | [92-angry-client-recovery.md](92-angry-client-recovery.md) |
+| 尾款拖着不给 | [88-final-payment-and-invoice.md](88-final-payment-and-invoice.md) | [49-deposit-rules.md](49-deposit-rules.md) |
+| 朋友介绍来的能不能按熟人价 | [89-referral-from-friends.md](89-referral-from-friends.md) | [55-referral-rewards-and-cps.md](55-referral-rewards-and-cps.md) |
+| 客户要跟合伙人一起定 | [90-multi-decision-makers.md](90-multi-decision-makers.md) | [26-proposal-templates.md](26-proposal-templates.md) |
+| 半年前的老客户还能联系吗 | [91-dormant-client-revisit.md](91-dormant-client-revisit.md) | [53-renewal-and-price-change.md](53-renewal-and-price-change.md) |
+| 客户发火质疑不专业 | [92-angry-client-recovery.md](92-angry-client-recovery.md) | [21-boundaries-and-compliance.md](21-boundaries-and-compliance.md) |
+| 想给每单建一张能填的卡 | [93-worksheet-deal-card.md](93-worksheet-deal-card.md) | [30-diagnosis-records.md](30-diagnosis-records.md) |
+| 产品阶梯与报价表怎么搭 | [94-worksheet-offer-ladder.md](94-worksheet-offer-ladder.md) | [24-pricing-logic.md](24-pricing-logic.md) |
+| 每周该看哪几个数字 | [95-worksheet-weekly-metrics.md](95-worksheet-weekly-metrics.md) | [13-operations.md](13-operations.md) |
+| 没有对应场景，怎么从零拼一条消息 | [96-worksheet-message-builder.md](96-worksheet-message-builder.md) | [15-message-checklist.md](15-message-checklist.md) |
 
 ## 三、按状态查主链路
 
@@ -81,7 +97,7 @@
 | S8 只要一句话 | 14 | 60 / 63 |
 | S9 要出内容 | 16 | 59 / 61 |
 
-## 四、全库速查（81 篇逐篇点名）
+## 四、全库速查（97 篇逐篇点名）
 
 > 这张表只用于维护与反查：确认编号对应哪个文件。日常使用按第一、二节查，不要通读。
 
@@ -168,12 +184,28 @@
 | 78 | [78-principles-and-tradeoffs.md](78-principles-and-tradeoffs.md) | 十二条设计取舍：为什么不做某些事 |
 | 79 | [79-self-practice-plan.md](79-self-practice-plan.md) | 三十天练习计划：每天只改一个动作 |
 | 80 | [80-glossary-and-index.md](80-glossary-and-index.md) | 术语表与全库索引 |
+| 81 | [81-channel-wechat.md](81-channel-wechat.md) | 微信一对一：语音、撤回与已读不回 |
+| 82 | [82-channel-social-platforms.md](82-channel-social-platforms.md) | 公开内容平台：从评论区到一对一 |
+| 83 | [83-channel-group-and-live.md](83-channel-group-and-live.md) | 群聊与直播：公开场合的答问与报价边界 |
+| 84 | [84-channel-voice-and-call.md](84-channel-voice-and-call.md) | 电话、语音与视频会议：口头谈完怎么落地 |
+| 85 | [85-scope-creep.md](85-scope-creep.md) | 加需求不加钱：范围怎么谈回来 |
+| 86 | [86-reschedule-and-delay.md](86-reschedule-and-delay.md) | 一改再改：改期与延期怎么收 |
+| 87 | [87-refund-and-dispute.md](87-refund-and-dispute.md) | 不满意要退款：争议怎么接住 |
+| 88 | [88-final-payment-and-invoice.md](88-final-payment-and-invoice.md) | 尾款拖着不给：提醒、发票与收尾 |
+| 89 | [89-referral-from-friends.md](89-referral-from-friends.md) | 熟人介绍来的：人情、转介绍与价格 |
+| 90 | [90-multi-decision-makers.md](90-multi-decision-makers.md) | 要跟合伙人一起定：多人决策怎么供料 |
+| 91 | [91-dormant-client-revisit.md](91-dormant-client-revisit.md) | 半年前的老客户：还能不能联系 |
+| 92 | [92-angry-client-recovery.md](92-angry-client-recovery.md) | 客户发火了：情绪、事实与修复 |
+| 93 | [93-worksheet-deal-card.md](93-worksheet-deal-card.md) | 工作表：一单一张卡（可填写档案） |
+| 94 | [94-worksheet-offer-ladder.md](94-worksheet-offer-ladder.md) | 工作表：产品阶梯与报价表 |
+| 95 | [95-worksheet-weekly-metrics.md](95-worksheet-weekly-metrics.md) | 工作表：每周该看哪几个数字 |
+| 96 | [96-worksheet-message-builder.md](96-worksheet-message-builder.md) | 工作表：从零拼一条消息（填空模板） |
 
-编号 00–80 连续、每篇必须在此出现一次。发布校验脚本会检查本表覆盖率与全库可达性。
+编号 00–96 连续、每篇必须在此出现一次。发布校验脚本会检查本表覆盖率与全库可达性。
 
 ## 五、维护规则
 
-新增或改名文件后，必须同步更新三处：本索引、[00-router.md](00-router.md) 的文件地图、SKILL.md 的目录结构与路由表。校验脚本会检查编号连续性、所有相对链接、本表覆盖率与每篇的可达性；新增文件后未同步本表会直接导致校验失败（见 [tests/regression-checklist.md](../tests/regression-checklist.md)）。
+新增或改名文件后，必须同步更新五处：本索引、[00-router.md](00-router.md) 的文件地图、SKILL.md 的目录结构与精确寻址表、17 篇主链路的深挖指引、`tests/canary-cases.json` 与 `version.json` 的篇数基线。校验脚本会检查编号连续性、所有相对链接、本表覆盖率与每篇的可达性；新增文件后未同步本表会直接导致校验失败（见 [tests/regression-checklist.md](../tests/regression-checklist.md)）。
 
 ## 六、禁忌
 

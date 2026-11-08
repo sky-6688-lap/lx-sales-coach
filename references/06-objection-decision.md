@@ -99,4 +99,6 @@
 | 万元级、要走长周期的单 | [70 long-cycle-deals](70-long-cycle-deals.md) |
 | 想推进但不想施压 | [51 no-pressure-closing](51-no-pressure-closing.md) |
 
+| 约好的时间一改再改 | [86 改期延期](86-reschedule-and-delay.md) |
+| 决策人不在场，材料要换写法 | [90 多人决策](90-multi-decision-makers.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

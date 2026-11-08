@@ -99,4 +99,5 @@
 | 要不要让价、怎么涨价 | [27 discount-and-price-change](27-discount-and-price-change.md) |
 | 百元级低客单的极简流程 | [71 low-price-deals](71-low-price-deals.md) |
 
+| 要搭三档产品阶梯和一页报价表 | [94 阶梯报价表](94-worksheet-offer-ladder.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

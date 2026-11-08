@@ -102,4 +102,6 @@
 | 想看某个行业怎么走单 | [62 industry-playbooks](62-industry-playbooks.md) |
 | 要把示例换成自己行业的词 | [66 scenario-replacements](66-scenario-replacements.md) |
 
+| 从社媒平台转来的第一句 | [82 社媒平台](82-channel-social-platforms.md) |
+| 客户发语音，回语音还是文字 | [81 微信语音](81-channel-wechat.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

@@ -92,4 +92,6 @@
 | 要把诊断结果记下来 | [30 diagnosis-records](30-diagnosis-records.md) |
 | 要改用客户自己的说法 | [32 customer-language](32-customer-language.md) |
 
+| 对方要拉合伙人一起定 | [90 多人决策](90-multi-decision-makers.md) |
+| 想把诊断结果记进一单一张卡 | [93 一单一卡](93-worksheet-deal-card.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

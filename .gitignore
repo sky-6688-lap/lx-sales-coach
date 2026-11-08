@@ -1,0 +1,14 @@
+# 本地构建产物与缓存（不进仓库）
+__pycache__/
+*.py[cod]
+*.zip
+*.backup.*
+.DS_Store
+Thumbs.db
+~$*
+.venv/
+node_modules/
+
+# 实测记录与批量提示词是本机产物，各自保留，不提交
+tests/platform-smoke-results.md
+tests/canary-prompts.md

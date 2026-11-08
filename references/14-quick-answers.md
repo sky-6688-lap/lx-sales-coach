@@ -127,4 +127,5 @@
 | 要 40 条成品消息库 | [63 chat-script-library](63-chat-script-library.md) |
 | 运行时拿不准的疑难 | [75 faq-for-agent](75-faq-for-agent.md) |
 
+| 速查没覆盖时自己拼一条 | [96 消息拼装](96-worksheet-message-builder.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

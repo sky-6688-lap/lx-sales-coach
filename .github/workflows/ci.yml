@@ -1,0 +1,31 @@
+name: skill-release-check
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 发布校验（结构 / 链接 / 红线 / 可达性 / 版本一致）
+        run: bash scripts/verify-release.sh
+
+      - name: Canary 回归（每个场景是否有可达落点）
+        run: python3 scripts/run-canary.py
+
+      - name: 跨平台兼容静态检查
+        run: python3 scripts/check-compat.py
+
+      - name: 确认校验脚本自身可执行
+        run: |
+          test -x scripts/verify-release.sh || chmod +x scripts/verify-release.sh
+          python3 -c "import json; json.load(open('version.json', encoding='utf-8')); json.load(open('tests/canary-cases.json', encoding='utf-8')); print('JSON 数据文件可解析')"

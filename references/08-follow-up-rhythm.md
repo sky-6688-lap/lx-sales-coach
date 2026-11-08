@@ -97,4 +97,6 @@
 | 该停了、以及什么条件下重启 | [44 stop-loss-and-reentry](44-stop-loss-and-reentry.md) |
 | 对照 20 个跟进错误 | [47 followup-mistakes](47-followup-mistakes.md) |
 
+| 改期算不算跟进信号 | [86 改期延期](86-reschedule-and-delay.md) |
+| 跟进消息该发语音还是文字 | [81 微信语音](81-channel-wechat.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

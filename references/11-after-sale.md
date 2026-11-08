@@ -89,4 +89,10 @@
 | 答谢与分佣怎么定 | [55 referral-rewards-and-cps](55-referral-rewards-and-cps.md) |
 | 收集口碑素材与授权 | [56 testimonials-and-authorization](56-testimonials-and-authorization.md) |
 
+| 中途加需求又不加钱 | [85 范围变更](85-scope-creep.md) |
+| 做完说不满意要退款 | [87 退款争议](87-refund-and-dispute.md) |
+| 尾款拖着不给 | [88 尾款发票](88-final-payment-and-invoice.md) |
+| 朋友介绍来要熟人价 | [89 熟人介绍](89-referral-from-friends.md) |
+| 半年前的老客户还能不能联系 | [91 老客复联](91-dormant-client-revisit.md) |
+| 客户发火了怎么修复 | [92 客户发火](92-angry-client-recovery.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。

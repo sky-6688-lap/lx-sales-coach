@@ -88,4 +88,6 @@
 | 把客户信息交接出去 | [73 handover-templates](73-handover-templates.md) |
 | 做四周经营复盘 | [74 weekly-review-examples](74-weekly-review-examples.md) |
 
+| 给每单建一张能填的卡 | [93 一单一卡](93-worksheet-deal-card.md) |
+| 每周该看哪几个经营数字 | [95 每周数字](95-worksheet-weekly-metrics.md) |
 逐状态精确映射见 SKILL.md 第四节，按问题反查见 [80 全库索引](80-glossary-and-index.md)。深挖不改变「能直接发出去的消息」这个交付标准。
