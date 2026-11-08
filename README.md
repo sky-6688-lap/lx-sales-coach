@@ -96,7 +96,7 @@ lx-sales-coach/
 
 `references/` 采用按需加载：Agent 只读取当前状态对应的 1–2 篇，不会把整库塞进上下文。97 篇按五层组织——00 总路由、01–16 主链路总纲、17–75 细分场景与实战工具、76–80 总览与全库索引、81–96 渠道媒介 / 履约争议 / 关系类型 / 可填写工作表（与 SKILL.md、00-router.md 的分组一致）。SKILL.md 第四节有「逐状态精确寻址表」，17 篇主链路每篇末尾也有「深挖指引」，按问题反查用 `references/80-glossary-and-index.md`（含 97 篇逐篇速查表）。**每一篇都有可从状态机到达的路径**，不是写完就没人读的死文件。
 
-内容规模：**97 篇 references / 104 个 markdown / 约 25.4 万字符 / 约 59 万字节**。全部方法文件均为本包独立编写，与任何第三方知识库、课程或专栏无关联，不含其原文；所有示例均标注为模板示例，不冒充真实案例。
+内容规模：**97 篇 references / 104 个 markdown / 约 27.3 万字符 / 约 64 万字节**。全部方法文件均为本包独立编写，与任何第三方知识库、课程或专栏无关联，不含其原文；所有示例均标注为模板示例，不冒充真实案例。
 
 ## 工程化与验证
 
@@ -108,8 +108,9 @@ lx-sales-coach/
 | 发布校验 | `scripts/verify-release.sh` | 结构 / frontmatter / 悬空链接 / 红线 / 版本一致 / 全库可达性 / 索引覆盖 / 深挖指引 / 成品消息长度 / 规则一致性 / 内容规模 |
 | Canary 回归 | `tests/canary-cases.json` + `scripts/run-canary.py` | 每篇一条真实业务问句，硬检查落点存在、在精确寻址表与速查表中均被点名、问句不重复；`--emit-prompts` 生成可在 Agent 里逐条实测的提示词 |
 | 持续集成 | `.github/workflows/ci.yml` | push / PR 时自动跑上面三项 + 兼容检查 + JSON 解析 |
-| 跨平台兼容 | `scripts/check-compat.py` | 静态检查 frontmatter、Codex `agents/openai.yaml`、UTF-8、shell 行尾、无本机绝对路径 |
-| 触发实测 | `tests/platform-smoke.md` + `scripts/platform-smoke.sh` | 三平台的一键 smoke 提示词与结果记录表；语义触发必须在对应运行时实测，静态脚本不伪造通过 |
+| 跨平台兼容 | `scripts/check-compat.py` | 静态检查 frontmatter、Codex `agents/openai.yaml`、UTF-8、全文本 LF 行尾、无本机绝对路径；能识别未加入 PATH 的桌面版 Codex CLI |
+| 触发实测 | `scripts/run-platform-smoke.py` + `scripts/platform-smoke.sh` | 真实调用本机 Codex / Claude Code CLI：自动发现 CLI（含桌面版）、系统代理、关闭 stdin、用空白工作目录隔离源码、从 `--json` 事件提取**实际读取的文件**做硬判定，并检测是否串读到其他技能目录；12 个场景覆盖门禁、状态机、细分篇、急救、合规、工作表。静态脚本不伪造通过 |
+| 技能隔离 | `SKILL.md` 运行时规则 11 | 同一 Agent 里若还装着别的销售/话术类技能，本 Skill 只从自身 `references/` 取材，不混用别家话术风格或案例（实测发现串包后加的硬规则） |
 
 本地一次跑完：
 
@@ -118,11 +119,14 @@ bash scripts/verify-release.sh
 python3 scripts/run-canary.py
 python3 scripts/run-canary.py --emit-prompts
 python3 scripts/check-compat.py
-bash scripts/platform-smoke.sh
+bash scripts/platform-smoke.sh              # 只探测环境
+bash scripts/platform-smoke.sh --run        # 有 CLI 时跑 12 个真实触发场景
 ```
 
-`--emit-prompts` 生成的 `tests/canary-prompts.md` 和实测结果表属于本机记录，已在 `.gitignore` 中排除，不会混进发布包。
+装了 Codex / Claude Code CLI 的环境可以直接跑 `--run`；runner 会自动找到未加入 PATH 的桌面版 CLI、读系统代理、关闭 stdin，并把每条用例**实际读取的文件**与原始回答写进 `tests/platform-smoke-results.md`。没有 CLI 时只做环境探测，不会写任何假的通过记录。`--emit-prompts` 生成的 `tests/canary-prompts.md` 和实测结果表属于本机记录，已在 `.gitignore` 中排除，不会混进发布包。
+
+**同一台机器上还装着别的销售技能时**：本包已声明自足与隔离，但最干净的做法仍是只保留要用的那一个，避免 Agent 在多个相似技能之间摇摆。
 
 ## 版本
 
-当前版本 **v2026.11.09.02**，见 [VERSION.md](VERSION.md)；更新记录见 [CHANGELOG.md](CHANGELOG.md)。自动更新比对的是仓库 main 分支上的 `version.json`，不是本地文件的修改时间。
+当前版本 **v2026.11.09.03**，见 [VERSION.md](VERSION.md)；更新记录见 [CHANGELOG.md](CHANGELOG.md)。该版本在 Codex 桌面版 CLI 上完成过多轮真实触发实测，并据此加固了技能隔离与触发词。自动更新比对的是仓库 main 分支上的 `version.json`，不是本地文件的修改时间。

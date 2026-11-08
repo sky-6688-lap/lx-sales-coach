@@ -43,7 +43,7 @@ required = [
     "tests/test-cases.md", "tests/regression-checklist.md", "tests/canary-cases.json",
     "tests/platform-smoke.md",
     "scripts/verify-release.sh", "scripts/install-local.sh", "scripts/run-canary.py",
-    "scripts/check-compat.py", "scripts/platform-smoke.sh",
+    "scripts/check-compat.py", "scripts/platform-smoke.sh", "scripts/run-platform-smoke.py",
 ]
 for rel in required:
     if not (root / rel).is_file():
@@ -84,7 +84,11 @@ if expected and nums != list(range(expected)):
     missing = sorted(set(range(expected)) - set(nums))
     errors.append(f"references 编号应为 00–{expected-1:02d} 连续，缺号：{missing}")
 
-all_md = [p for p in root.rglob("*.md") if ".git" not in p.parts]
+# 本机生成的实测记录 / 提示词不参与发布内容校验与规模统计（已在 .gitignore 中排除）
+generated = {"tests/canary-prompts.md", "tests/platform-smoke-results.md",
+             "tests/.platform-smoke-state.json"}
+all_md = [p for p in root.rglob("*.md") if ".git" not in p.parts
+          and p.relative_to(root).as_posix() not in generated]
 for p in all_md:
     text = p.read_text(encoding="utf-8")
     if len(text.strip()) < 300:
@@ -175,6 +179,21 @@ for p in refs:
 missing_idx = [p.name for p in refs if p.name not in index_text]
 if missing_idx:
     errors.append(f"80 全库速查表未点名 {len(missing_idx)} 篇：{missing_idx[:6]}")
+# 按问题查文件表也要逐篇可反查，避免「只有全库速查认得、按问题找不到」
+quick_sec = index_text.split("## 二、按问题查文件（速查）")[-1]
+quick_sec = quick_sec.split("## 三、")[0] if "## 三、" in quick_sec else quick_sec.split("## 四、")[0]
+quick_nums = set()
+for line in quick_sec.splitlines():
+    if not line.startswith("|"):
+        continue
+    quick_nums |= {int(x) for x in re.findall(r"(?<!\d)(\d{2})-[a-z]", line)}
+    for cell in line.split("|"):
+        c = cell.strip()
+        if c and re.fullmatch(r"[\d\s/、,，]+", c):
+            quick_nums |= {int(x) for x in re.findall(r"\b(\d{2})\b", c)}
+missing_quick = sorted(set(range(len(refs))) - quick_nums)
+if missing_quick:
+    errors.append(f"80 按问题查文件表未覆盖 {len(missing_quick)} 个编号：{missing_quick[:10]}")
 if "逐状态精确寻址表" not in skill_text:
     errors.append("SKILL.md 缺少逐状态精确寻址表")
 for p in refs[:17]:
@@ -186,6 +205,19 @@ if "四段式，缺一不可" in skill_text:
     errors.append("SKILL.md 仍写「四段式缺一不可」，与 00 / 20 的简化口径冲突")
 if "门禁 = 三件事 + 一句客户原话" not in skill_text:
     errors.append("SKILL.md 门禁四项口径未统一")
+# 实测暴露的三类硬规则，缺一条就可能退回旧行为
+for rule, why in [
+    ("加载后只认这一份", "缺少技能隔离声明，实测会串读到其他销售技能的话术文件"),
+    ("技能隔离", "运行时规则缺少「不读取其他技能目录」"),
+    ("占位符一律方括号", "实测出现过【】占位符，必须写进硬格式规则"),
+    ("具体场景优先于状态大类", "缺少细分篇优先规则，实测会只回主篇不进细分文件"),
+    ("门禁齐了就直接出结果", "实测出现过背景齐全仍倒回去反问、且不给成品消息"),
+]:
+    if rule not in skill_text:
+        errors.append(f"SKILL.md {why}：缺「{rule}」")
+for trigger in ("别问了", "给我一句能发的", "一单一卡", "退款"):
+    if trigger not in skill_text.split("---", 2)[1]:
+        errors.append(f"description 缺少实测补强的触发词「{trigger}」")
 readme = (root / "README.md").read_text(encoding="utf-8") if (root / "README.md").is_file() else ""
 for token in ("17–75", "76–80", "81–96"):
     if token not in readme:
@@ -211,7 +243,8 @@ if long_msgs:
 
 # 11. 统计
 total_chars = sum(len(p.read_text(encoding="utf-8")) for p in all_md)
-total_bytes = sum(p.stat().st_size for p in root.rglob("*") if p.is_file())
+total_bytes = sum(p.stat().st_size for p in root.rglob("*") if p.is_file()
+                  and p.relative_to(root).as_posix() not in generated)
 if total_chars < min_chars:
     errors.append(f"内容规模不足：{total_chars:,} 字符，应不低于 version.json 声明的 {min_chars:,}")
 if total_bytes < min_bytes:

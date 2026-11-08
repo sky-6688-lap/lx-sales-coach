@@ -11,4 +11,5 @@ node_modules/
 
 # 实测记录与批量提示词是本机产物，各自保留，不提交
 tests/platform-smoke-results.md
+tests/.platform-smoke-state.json
 tests/canary-prompts.md

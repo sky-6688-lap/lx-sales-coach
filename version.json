@@ -1,17 +1,17 @@
 {
   "schema": 1,
   "name": "lx-sales-coach",
-  "version": "v2026.11.09.02",
-  "released": "2026-11-09T00:45:00+08:00",
+  "version": "v2026.11.09.03",
+  "released": "2026-11-09T02:10:00+08:00",
   "repository": "https://github.com/sky-6688-lap/lx-sales-coach",
-  "release_tag": "v2026.11.09.02",
-  "release_url": "https://github.com/sky-6688-lap/lx-sales-coach/releases/tag/v2026.11.09.02",
+  "release_tag": "v2026.11.09.03",
+  "release_url": "https://github.com/sky-6688-lap/lx-sales-coach/releases/tag/v2026.11.09.03",
   "trace": "内容与 commit 以同名 Release tag 为准；版本文件不自引用 commit，避免循环依赖",
   "integrity": {
     "references": 97,
     "markdown_files": 104,
-    "min_chars": 245000,
-    "min_bytes": 570000
+    "min_chars": 260000,
+    "min_bytes": 615000
   },
   "update": {
     "compare_fields": ["version", "integrity.references"],

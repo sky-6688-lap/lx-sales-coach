@@ -42,7 +42,7 @@
 | 怀疑对方只是随便问问 | [29-fake-needs-in-detail.md](29-fake-needs-in-detail.md) | [13-operations.md](13-operations.md) |
 | 想把聊天记下来 / 做复盘 | [30-diagnosis-records.md](30-diagnosis-records.md) | [31-lost-deal-attribution.md](31-lost-deal-attribution.md) |
 | 这单为什么没成 | [04-chat-review.md](04-chat-review.md) | [69-failure-cases.md](69-failure-cases.md) |
-| 客户说贵 / 预算 / 别家便宜 | [33-objection-taxonomy.md](33-objection-taxonomy.md) | 34 / 35 / 36 / 37 |
+| 客户说贵 / 预算 / 别家便宜 | [33-objection-taxonomy.md](33-objection-taxonomy.md) | [34 预算](34-price-budget.md) / [35 不值](35-price-value-uncertainty.md) / [36 比价](36-competitor-comparison.md) / [37 砍价](37-haggling-scripts.md) |
 | 客户说考虑 / 商量 / 再看看 | [38-decision-variants.md](38-decision-variants.md) | [06-objection-decision.md](06-objection-decision.md) |
 | 客户要保证 / 要案例 / 要方案 | [39-trust-and-guarantees.md](39-trust-and-guarantees.md) | [56-testimonials-and-authorization.md](56-testimonials-and-authorization.md) |
 | 突然变冷 / 一直白问 | [40-coldness-and-free-asking.md](40-coldness-and-free-asking.md) | [07-objection-trust.md](07-objection-trust.md) |
@@ -81,6 +81,15 @@
 | 产品阶梯与报价表怎么搭 | [94-worksheet-offer-ladder.md](94-worksheet-offer-ladder.md) | [24-pricing-logic.md](24-pricing-logic.md) |
 | 每周该看哪几个数字 | [95-worksheet-weekly-metrics.md](95-worksheet-weekly-metrics.md) | [13-operations.md](13-operations.md) |
 | 没有对应场景，怎么从零拼一条消息 | [96-worksheet-message-builder.md](96-worksheet-message-builder.md) | [15-message-checklist.md](15-message-checklist.md) |
+| 客户就一句「太贵了」，先按哪类接 | [05-objection-price.md](05-objection-price.md) | [33-objection-taxonomy.md](33-objection-taxonomy.md) |
+| 跟进几次算合适、什么时候该停 | [08-follow-up-rhythm.md](08-follow-up-rhythm.md) | [44-stop-loss-and-reentry.md](44-stop-loss-and-reentry.md) |
+| 交付做完了，怎么自然提复购 | [11-after-sale.md](11-after-sale.md) | [54-referral-timing-and-scripts.md](54-referral-timing-and-scripts.md) |
+| 要写不发硬广的内容 / 朋友圈 | [16-content-writing.md](16-content-writing.md) | [61-content-templates.md](61-content-templates.md) |
+| 三次跟进分别给什么 | [43-three-touchpoints.md](43-three-touchpoints.md) | [65-followup-calendar.md](65-followup-calendar.md) |
+| 我这个行业这类单怎么走 | [62-industry-playbooks.md](62-industry-playbooks.md) | [66-scenario-replacements.md](66-scenario-replacements.md) |
+| 要一句一句的异议应答矩阵 | [64-objection-response-matrix.md](64-objection-response-matrix.md) | [37-haggling-scripts.md](37-haggling-scripts.md) |
+| 199 的低客单还要重型谈单吗 | [71-low-price-deals.md](71-low-price-deals.md) | [02-pricing-and-quote.md](02-pricing-and-quote.md) |
+| 按我现在这个问题反查该读哪篇 | [80-glossary-and-index.md](80-glossary-and-index.md) | [00-router.md](00-router.md) |
 
 ## 三、按状态查主链路
 

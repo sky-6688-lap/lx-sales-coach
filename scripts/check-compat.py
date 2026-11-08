@@ -75,7 +75,11 @@ else:
     notes.append("agents/openai.yaml 字段与本机 Codex 系统技能一致（interface / display_name / short_description / default_prompt）")
 
 # 3. 编码、行尾、路径：CI 跑在 Linux，shell 脚本必须是 LF
-tracked = [p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts]
+generated = {"tests/canary-prompts.md", "tests/platform-smoke-results.md",
+             "tests/.platform-smoke-state.json"}
+tracked = [p for p in ROOT.rglob("*") if p.is_file() and ".git" not in p.parts
+           and p.relative_to(ROOT).as_posix() not in generated
+           and "__pycache__" not in p.parts]
 for p in tracked:
     raw = p.read_bytes()
     if p.suffix in {".md", ".json", ".yaml", ".yml", ".sh", ".py"}:
@@ -106,7 +110,27 @@ for label, d in platform_dirs.items():
     notes.append(f"{label}: {state}（{d}）")
 for cli in ("codex", "claude"):
     from shutil import which
-    notes.append(f"{cli} CLI: {'可用' if which(cli) else '本机未安装，语义触发实测需换环境执行'}")
+    found = which(cli)
+    where = "PATH"
+    if not found and cli == "codex":
+        # 桌面版 Codex 常把 CLI 放在应用目录、不加入 PATH；不能因此误报「未安装」
+        probes = [
+            Path.home() / ".codex" / ".sandbox-bin" / "codex.exe",
+            Path.home() / ".codex" / ".sandbox-bin" / "codex",
+        ]
+        bindir = Path.home() / "AppData" / "Local" / "OpenAI" / "Codex" / "bin"
+        if bindir.is_dir():
+            probes += sorted(bindir.glob("*/codex.exe"), reverse=True)
+        cfg = Path.home() / ".codex" / "config.toml"
+        if cfg.is_file():
+            m = re.search(r"CODEX_CLI_PATH\s*=\s*'([^']+)'", cfg.read_text(encoding="utf-8", errors="replace"))
+            if m:
+                probes.insert(0, Path(m.group(1)))
+        for c in probes:
+            if c.is_file():
+                found, where = str(c), "桌面版路径"
+                break
+    notes.append(f"{cli} CLI: {('可用（' + where + '）') if found else '未发现，语义触发实测需换环境执行'}")
 
 print("跨平台静态兼容检查：")
 for n in notes:

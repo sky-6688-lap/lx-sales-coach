@@ -29,3 +29,10 @@ jobs:
         run: |
           test -x scripts/verify-release.sh || chmod +x scripts/verify-release.sh
           python3 -c "import json; json.load(open('version.json', encoding='utf-8')); json.load(open('tests/canary-cases.json', encoding='utf-8')); print('JSON 数据文件可解析')"
+
+      - name: 实测 runner 自检（不发起 AI 调用）
+        run: |
+          python3 -m py_compile scripts/run-platform-smoke.py scripts/run-canary.py scripts/check-compat.py
+          python3 scripts/run-platform-smoke.py --list | grep -q T12
+          python3 scripts/run-platform-smoke.py --detect-only
+          echo '实测 runner 语法与用例清单正常；语义触发需在装有 CLI 的环境执行 --run'
