@@ -1,8 +1,8 @@
 # Skill 版本证明
 
-- Version: v2026.11.09.03
-- Released: 2026-11-09 02:10 CST
-- Release tag: v2026.11.09.03
+- Version: v2026.11.09.04
+- Released: 2026-11-09 14:53 CST
+- Release tag: v2026.11.09.04
 - Source commit: 见仓库 main 分支与同 tag 的 Release
 - Repository: https://github.com/sky-6688-lap/lx-sales-coach
 - Machine-readable: version.json（更新时比对的唯一对象）
@@ -13,8 +13,8 @@
 
 如果本地 `references/` 篇数少于 `version.json` 的 `integrity.references`，或本地 markdown 字符数明显低于 `integrity.min_chars`，说明安装不完整，应回复「安装不完整，请重新拉取完整包」，不要按残缺版继续使用。
 
-本版本共 **97 篇 references、104 个 markdown、约 27.3 万字符**，内容全部独立编写。97 篇均可从 SKILL.md 逐状态精确寻址表、17 篇主链路的深挖指引或 80 全库速查表到达；80 索引的「按问题查文件」表也已覆盖全部 97 个编号；`python3 scripts/run-canary.py` 会给每篇一条业务问句并验证落点存在且可达。若某篇怎么都读不到，说明装的是旧版本。
+本版本共 **97 篇 references、104 个 markdown、约 28.3 万字符**，内容全部独立编写。97 篇均可从 SKILL.md 逐状态精确寻址表、17 篇主链路的深挖指引或 80 全库速查表到达；80 索引的「按问题查文件」表也已覆盖全部 97 个编号；`python3 scripts/run-canary.py` 会给每篇一条业务问句并验证落点存在且可达。若某篇怎么都读不到，说明装的是旧版本。
 
 配套工程能力：`scripts/verify-release.sh`（发布校验）、`scripts/run-canary.py`（97 条 canary）、`scripts/check-compat.py`（三平台静态兼容）、`.github/workflows/ci.yml`（push / PR 自动跑全部校验）、`scripts/run-platform-smoke.py` + `scripts/platform-smoke.sh`（真实调用本机 CLI 的语义触发实测，从 `--json` 事件提取实际读取的文件做硬判定，并检测串包）。
 
-本版本在 Codex 桌面版 CLI 上做过**多轮真实触发实测**，据此补上了技能隔离声明、急救触发词、成品消息硬格式与「具体场景优先于状态大类」四条规则，详见 `CHANGELOG.md` 与 `tests/platform-smoke.md`。静态脚本不替代 Agent 运行时的触发实测；本机无 Claude Code CLI，该平台仍标注为未实测。
+本版本在 Codex 桌面版 CLI 上做过**多轮真实触发实测**（含卸载原版后的 42 次全量回归与定向复测），据此补上了技能隔离声明、急救触发词、成品消息硬格式、「具体场景优先于状态大类」、「动笔前红线闸门」与「场景例外清单」，详见 `CHANGELOG.md` 与 `tests/platform-smoke.md`。静态脚本不替代 Agent 运行时的触发实测；本机无 Claude Code CLI，该平台仍标注为未实测。

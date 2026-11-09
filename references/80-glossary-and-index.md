@@ -23,12 +23,16 @@
 | **承接模块** | 「欢迎咨询」「私信领取」这类引流语，本 Skill 一律不写 |
 | **占位符** | `[产品]`、`[价格]`、`[他的原话]` 等，缺一未替换就不算成品 |
 | **深浅判断** | 只要一句能发的走急救层；要拆解的进对应模块；两边都要先短后深 |
+| **红线闸门** | SKILL.md 规则 14：动笔前的判定，先于状态与文件路由；命中编案例、效果证明、夹带链接就停，给边界 + 替代动作 |
+| **场景例外** | SKILL.md 规则 15：急救、合规、履约争议、渠道取舍、工作表、红线拒绝，背景不全也先给成品消息 |
 
 ## 二、按问题查文件（速查）
 
 | 我现在的问题 | 先读 | 深挖 |
 |---|---|---|
 | 不知道该问什么背景 | [17-gate-playbook.md](17-gate-playbook.md) | [28-question-bank.md](28-question-bank.md) |
+| 用户要「证明客户都有效果」/ 编案例 / 加课程链接 | [21-boundaries-and-compliance.md](21-boundaries-and-compliance.md) | [75-faq-for-agent.md](75-faq-for-agent.md) |
+| 背景不全但问的是退款 / 语音 / 合规 / 工作表 | [17-gate-playbook.md](17-gate-playbook.md) | [00-router.md](00-router.md) |
 | 状态判不准 / 判错了 | [00-router.md](00-router.md) | [18-state-judgment-cases.md](18-state-judgment-cases.md) |
 | 消息写出来像模板 | [19-message-style-rewrites.md](19-message-style-rewrites.md) | [32-customer-language.md](32-customer-language.md) |
 | 不知道四段式长什么样 | [20-four-part-answer-examples.md](20-four-part-answer-examples.md) | [77-conversation-anatomy.md](77-conversation-anatomy.md) |
