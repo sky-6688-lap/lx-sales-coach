@@ -34,7 +34,7 @@ CASES = [
     ("T03", "卖 2980 的求职陪跑，第二次聊，客户原话是「预算只有一半」，怎么接？",
      ["34-price-budget.md"], ["预算", ">"], "精确寻址命中细分篇 34"),
     ("T04", "别问了，先给我一句能发的。", ["14-quick-answers.md", "SKILL.md"],
-     ["[产品]"], "急救例外 ≤2 条带占位"),
+     ["[产品]"], "急救例外 2-3 条短句带占位"),
     ("T05", "卖 2980 的求职陪跑，第二次聊，客户原话是「我再考虑一下」。简单说，怎么回？",
      ["SKILL.md", "06-objection-decision.md", "38-decision-variants.md"], [">"],
      "简单说只给两段、成品不省"),
@@ -171,14 +171,14 @@ def run_one(cli, prefix, case, ws: Path, env: dict, tmp: Path):
         verdict = "PASS"
     # 成品消息格式是独立指标，不并入 PASS/FAIL 主判定（工作表类产出本来就是表格）
     quoted = [l[2:].strip() for l in answer.splitlines() if l.startswith("> ")]
-    too_long = [q for q in quoted if len(q) > 60]
+    too_long = [q for q in quoted if len(q) > 120]
     fullwidth = any("【" in q or "】" in q for q in quoted)
     if not quoted:
         fmt = "—（无引用块消息）"
     elif fullwidth:
         fmt = "全角占位符"
     elif too_long:
-        fmt = f"{len(too_long)} 条 >60 字"
+        fmt = f"{len(too_long)} 条写成一大段"
     else:
         fmt = "OK"
     return {"id": cid, "label": label, "ok": verdict == "PASS", "verdict": verdict,
@@ -248,7 +248,7 @@ def main():
             lines.append(f"| {r['id']} {r.get('label','')} | {r['verdict']} | {r['seconds']}s | "
                          f"{', '.join(r['reads']) or '（无）'} | {', '.join(r['hit']) or '—'} | "
                          f"{r.get('format','—')} | {'; '.join(r['errors'])[:80] or '—'} |")
-        lines += ["", "> 「成品格式」是独立观察指标：>60 字属软性建议（SKILL.md 写的是「为主，超了就拆」），"
+        lines += ["", "> 「成品格式」是独立观察指标：单条写成一大段（超过 3 行）属软性建议（SKILL.md 写的是「短句连发，写成一大段就拆」），"
                   "全角占位符与串包才是硬问题。工作表类用例产出表格，无引用块消息属正常。", ""]
         lines += ["", "## 原始回答（各用例最近一次）", ""]
         for r in all_results:

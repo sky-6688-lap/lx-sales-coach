@@ -13,7 +13,7 @@
 【4 删】去掉解释、体谅、自证、铺垫、第二问
 ```
 
-**长度硬约束**：单条不超过 60 字，一次最多 3 条，结尾必须留一个好回答的口子。这是六条消息风格里的硬项，见 [19-message-style-rewrites.md](19-message-style-rewrites.md)、[15-message-checklist.md](15-message-checklist.md)。
+**短句连发**：一段拆成 3-5 条，单条不超过 3 行，说「咱们」、语气词用够、反问确认收尾。这是六条消息风格里的硬项，见 [19-message-style-rewrites.md](19-message-style-rewrites.md)、[15-message-checklist.md](15-message-checklist.md)。
 
 ## 二、按意图选骨架
 
@@ -59,7 +59,7 @@
 | 有没有接住他的词 | 「感谢您的关注」 | 换成他原话里的那一个词 |
 | 是不是只给一样东西 | 一段里塞了观点 + 案例 + 链接 | 只留一样，其余删 |
 | 有没有解释与自证 | 「其实我们做过很多……」 | 整句删 |
-| 单条是否 ≤60 字 | 一句里三个逗号两个分号 | 拆成两条或砍掉后半 |
+| 单条是否不超过 3 行 | 一句里三个逗号两个分号 | 拆成短句连发，别写一大段 |
 | 结尾好不好回答 | 「您考虑一下」 | 换成具体选项或「不用回我」 |
 | 有没有越界 | 保证结果、限时、群发感 | 过 [21-boundaries-and-compliance.md](21-boundaries-and-compliance.md) |
 
@@ -81,7 +81,7 @@
 
 ## 六、从四段式回答到一条消息
 
-Agent 的完整回答是四段式（一句判断 / 依据与风险 / 可直接发的消息 / 下一步与一条禁忌），见 [20-four-part-answer-examples.md](20-four-part-answer-examples.md)。但**用户真正要发出去的只有第三段**。所以：
+Agent 的完整回答是四段式（先说透认知 / 依据与风险 / 可直接发的消息 / 下一步与一条禁忌），见 [20-four-part-answer-examples.md](20-four-part-answer-examples.md)。但**用户真正要发出去的只有第三段**。所以：
 
 - 第三段必须能独立成立，脱离前面两段也读得懂、发得出去。
 - 不要在第三段里写「如上面所说」「根据前面的判断」这类依赖上下文的话。

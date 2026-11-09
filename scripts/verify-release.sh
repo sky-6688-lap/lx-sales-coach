@@ -111,7 +111,9 @@ for p in all_md:
 # 5. 红线关键词：不得出现第三方产品原文特征
 forbidden = [
     "南景", "成交复利系统", "销冠十点", "黄金谈单五步", "钩子成交法",
-    "点线面体", "语气词密集", "反问收尾", "说咱们", "追单七阶段",
+    "点线面体", "追单七阶段",
+    # v2026.11.09.07 起本包按原版明文采用短句连发 / 语气词 / 反问收尾 / 说「咱们」，
+    # 这几项风格词不再是串包判据；专有名词与品牌名仍为硬红线。
 ]
 for p in all_md:
     text = p.read_text(encoding="utf-8")
@@ -215,7 +217,7 @@ for rule, why in [
     ("动笔前红线闸门", "实测创作类请求会跳过红线、进 16 篇编案例与夹带链接"),
     ("场景例外清单", "实测合规 / 争议 / 渠道会被门禁四项劫持，只给判断不给成品消息"),
     ("红线拒绝的标准输出", "实测红线守住了但第三段只有说明文字，没给引用块里的等价消息"),
-    ("例外场景的成品消息同样过规则 12", "实测例外场景出现单条超 60 字的长解释"),
+    ("例外场景的成品消息同样过规则 12", "实测例外场景出现写成一大段的长解释"),
     ("命中后回答的第一句就是边界本身", "实测拒绝句之前仍带角色宣告或先答应后否定的开场白"),
     ("输出第一句规则（全局，优先于以下所有规则）", "角色宣告开场反复出现，需提到文件最顶端"),
     ("三版本默认输出", "缺少规则 16：每次给客户的成品消息默认给 A / B / C 三版"),
@@ -281,7 +283,7 @@ if "乐享｜成交实战教练" in skill_text + readme + openai_yaml:
 if "name: lx-sales-coach" not in skill_text:
     errors.append("机器标识 lx-sales-coach 被改动，只改显示名的约定被破坏")
 
-# 10. 成品示例消息长度：示例就是标准，不能自己违反六条风格规则
+# 10. 成品示例消息长度：示例就是标准，按原版明文不许写成一大段（单条不超过 3 行）
 skip_markers = (".md", "模板示例", "状态 S", "SKILL.md")
 skip_prefixes = ("补 ", "本文", "本篇", "相关：", "判断：", "依据：")
 long_msgs = []
@@ -292,10 +294,10 @@ for p in refs:
         s = line[2:].strip()
         if len(s) < 10 or s.startswith("#") or any(m in s for m in skip_markers) or s.startswith(skip_prefixes):
             continue
-        if len(s) > 60:
-            long_msgs.append(f"{p.name}:{lineno}（{len(s)} 字）")
+        if len(s) > 120:
+            long_msgs.append(f"{p.name}:{lineno}（{len(s)} 字，写成一大段）")
 if long_msgs:
-    errors.append(f"成品示例消息超过 60 字共 {len(long_msgs)} 条：{long_msgs[:6]}")
+    errors.append(f"成品示例消息写成一大段（超过 3 行）共 {len(long_msgs)} 条：{long_msgs[:6]}")
 
 # 11. 统计
 total_chars = sum(len(p.read_text(encoding="utf-8")) for p in all_md)
