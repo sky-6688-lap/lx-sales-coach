@@ -1,8 +1,9 @@
 # Skill 版本证明
 
-- Version: v2026.11.09.04
-- Released: 2026-11-09 14:53 CST
-- Release tag: v2026.11.09.04
+- Version: v2026.11.09.05
+- Released: 2026-11-09 15:35 CST
+- Release tag: v2026.11.09.05
+- Display name: 乐享｜成交话术（副标题：先判卡在哪一步，再给能直接发出去的消息；机器标识 `lx-sales-coach` 不变）
 - Source commit: 见仓库 main 分支与同 tag 的 Release
 - Repository: https://github.com/sky-6688-lap/lx-sales-coach
 - Machine-readable: version.json（更新时比对的唯一对象）

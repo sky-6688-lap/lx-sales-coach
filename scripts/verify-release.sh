@@ -231,6 +231,27 @@ for token in ("17–75", "76–80", "81–96"):
 if "version.json" not in readme:
     errors.append("README 未说明机器可读版本文件 version.json")
 
+# 9b. 显示名一致性：只改显示名时，四处必须同步，机器标识不得被改动
+DISPLAY_NAME = "乐享｜成交话术"
+TAGLINE = "先判卡在哪一步，再给能直接发出去的消息"
+openai_yaml = (root / "agents" / "openai.yaml").read_text(encoding="utf-8") if (root / "agents" / "openai.yaml").is_file() else ""
+if f"# {DISPLAY_NAME} Skill" not in skill_text:
+    errors.append("SKILL.md H1 显示名与发布口径不一致")
+if f'description: "{DISPLAY_NAME}：' not in skill_text:
+    errors.append("SKILL.md description 开头显示名与发布口径不一致")
+if f'short-description: "{TAGLINE}"' not in skill_text:
+    errors.append("SKILL.md metadata.short-description 副标题不一致")
+if f"# {DISPLAY_NAME} Skill" not in readme:
+    errors.append("README.md H1 显示名与发布口径不一致")
+if f'display_name: "{DISPLAY_NAME}"' not in openai_yaml:
+    errors.append("agents/openai.yaml display_name 与发布口径不一致")
+if f'short_description: "{TAGLINE}"' not in openai_yaml:
+    errors.append("agents/openai.yaml short_description 副标题不一致")
+if "乐享｜成交实战教练" in skill_text + readme + openai_yaml:
+    errors.append("仍残留旧显示名「乐享｜成交实战教练」")
+if "name: lx-sales-coach" not in skill_text:
+    errors.append("机器标识 lx-sales-coach 被改动，只改显示名的约定被破坏")
+
 # 10. 成品示例消息长度：示例就是标准，不能自己违反六条风格规则
 skip_markers = (".md", "模板示例", "状态 S", "SKILL.md")
 skip_prefixes = ("补 ", "本文", "本篇", "相关：", "判断：", "依据：")

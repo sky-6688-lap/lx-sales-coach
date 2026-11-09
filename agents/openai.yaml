@@ -1,4 +1,4 @@
 interface:
-  display_name: "乐享｜成交实战教练"
-  short_description: "先判断这一单卡在哪一步，再给出能直接发出去的消息与下一步动作"
+  display_name: "乐享｜成交话术"
+  short_description: "先判卡在哪一步，再给能直接发出去的消息"
   default_prompt: "请使用 $lx-sales-coach，帮我看看手上这单卡在哪一步，给我一段能直接发给客户的消息。我会说明卖什么、价格档、上次聊到哪儿，以及客户那句原话。"
