@@ -872,6 +872,24 @@
         "填空",
         "拼"
       ]
+    },
+    {
+      "id": "97",
+      "question": "同一句客户原话，能给我三个力度不同的回复版本吗",
+      "expect": "97-three-version-messages.md",
+      "keywords": [
+        "三个",
+        "版本"
+      ]
+    },
+    {
+      "id": "98",
+      "question": "这句回过去会不会让客户不高兴，语气温和点怎么改",
+      "expect": "98-warm-tone-redlines.md",
+      "keywords": [
+        "温和",
+        "语气"
+      ]
     }
   ]
 }

@@ -25,6 +25,8 @@
 | **深浅判断** | 只要一句能发的走急救层；要拆解的进对应模块；两边都要先短后深 |
 | **红线闸门** | SKILL.md 规则 14：动笔前的判定，先于状态与文件路由；命中编案例、效果证明、夹带链接就停，给边界 + 替代动作 |
 | **场景例外** | SKILL.md 规则 15：急救、合规、履约争议、渠道取舍、工作表、红线拒绝，背景不全也先给成品消息 |
+| **三版本** | SKILL.md 规则 16：给客户的成品消息默认给 A 稳一稳 / B 说清楚 / C 往前一步三版，逐版可直接复制；只有用户明确「只要一句」时给 1 版 |
+| **温和语气** | SKILL.md 规则 17 与第七节红线 9：不否定、不质问、不比较、不施压、不教育、不句首硬转折；三版逐版过，客户已有不满时整体降到 A 档 |
 
 ## 二、按问题查文件（速查）
 
@@ -68,6 +70,8 @@
 | 想练手 / 想复盘四周 | [67-roleplay-drills.md](67-roleplay-drills.md) | [74-weekly-review-examples.md](74-weekly-review-examples.md) |
 | 想系统练三十天 | [79-self-practice-plan.md](79-self-practice-plan.md) | [76-sales-system-overview.md](76-sales-system-overview.md) |
 | 不确定某句能不能给 | [75-faq-for-agent.md](75-faq-for-agent.md) | [21-boundaries-and-compliance.md](21-boundaries-and-compliance.md) |
+| 要三个不同力度的回复版本 | [97-three-version-messages.md](97-three-version-messages.md) | [20-four-part-answer-examples.md](20-four-part-answer-examples.md) |
+| 怕语气太硬、怕激怒客户 | [98-warm-tone-redlines.md](98-warm-tone-redlines.md) | [92-angry-client-recovery.md](92-angry-client-recovery.md) |
 | 想知道为什么这么设计 | [78-principles-and-tradeoffs.md](78-principles-and-tradeoffs.md) | [76-sales-system-overview.md](76-sales-system-overview.md) |
 | 客户发语音，我该回语音还是文字 | [81-channel-wechat.md](81-channel-wechat.md) | [84-channel-voice-and-call.md](84-channel-voice-and-call.md) |
 | 小红书评论区有人问价 | [82-channel-social-platforms.md](82-channel-social-platforms.md) | [59-inbound-content.md](59-inbound-content.md) |
@@ -110,7 +114,7 @@
 | S8 只要一句话 | 14 | 60 / 63 |
 | S9 要出内容 | 16 | 59 / 61 |
 
-## 四、全库速查（97 篇逐篇点名）
+## 四、全库速查（99 篇逐篇点名）
 
 > 这张表只用于维护与反查：确认编号对应哪个文件。日常使用按第一、二节查，不要通读。
 
@@ -213,15 +217,30 @@
 | 94 | [94-worksheet-offer-ladder.md](94-worksheet-offer-ladder.md) | 工作表：产品阶梯与报价表 |
 | 95 | [95-worksheet-weekly-metrics.md](95-worksheet-weekly-metrics.md) | 工作表：每周该看哪几个数字 |
 | 96 | [96-worksheet-message-builder.md](96-worksheet-message-builder.md) | 工作表：从零拼一条消息（填空模板） |
+| 97 | [97-three-version-messages.md](97-three-version-messages.md) | 三个版本：同一场景，三种力度都能直接发 |
+| 98 | [98-warm-tone-redlines.md](98-warm-tone-redlines.md) | 温和语气：不激怒、不挑起不满的表达红线 |
 
-编号 00–96 连续、每篇必须在此出现一次。发布校验脚本会检查本表覆盖率与全库可达性。
+编号 00–98 连续、每篇必须在此出现一次。发布校验脚本会检查本表覆盖率与全库可达性。
 
 ## 五、维护规则
 
-新增或改名文件后，必须同步更新五处：本索引、[00-router.md](00-router.md) 的文件地图、SKILL.md 的目录结构与精确寻址表、17 篇主链路的深挖指引、`tests/canary-cases.json` 与 `version.json` 的篇数基线。校验脚本会检查编号连续性、所有相对链接、本表覆盖率与每篇的可达性；新增文件后未同步本表会直接导致校验失败（见 [tests/regression-checklist.md](../tests/regression-checklist.md)）。
+新增或改名文件后，必须同步更新五处：本索引、[00-router.md](00-router.md) 的文件地图、SKILL.md 的目录结构与精确寻址表、17 篇主链路的深挖指引、`tests/canary-cases.json` 与 `version.json` 的篇数基线。97 / 98 两篇是输出形态层：任何改第 3 段排布或语气底线的版本，都要回查这两篇与 SKILL.md 规则 16 / 17 是否同口径。校验脚本会检查编号连续性、所有相对链接、本表覆盖率与每篇的可达性；新增文件后未同步本表会直接导致校验失败（见 [tests/regression-checklist.md](../tests/regression-checklist.md)）。
 
 ## 六、禁忌
 
 最忌讳**拿着索引去通读**。找到那一行，读一到两篇，写完过 15 的自检，就够了。
 
 相关：[00-router.md](00-router.md)（判定顺序）、[76-sales-system-overview.md](76-sales-system-overview.md)（系统总览）、[SKILL.md](../SKILL.md)（总入口）。
+
+## 七、输出形态速查（规则 16 / 17）
+
+| 用户怎么说 | 第 3 段给几版 | 去哪篇 |
+|---|---|---|
+| 没特别说，正常问「怎么回」 | 3 版（A / B / C） | [97 三版本](97-three-version-messages.md) |
+| 「只要一句」「别问了直接给」 | 1 版（占位版） | [14 急救](14-quick-answers.md) |
+| 「给我两版」 | 2 版，写清适用条件 | [97 三版本](97-three-version-messages.md) |
+| 「多给几套」 | 最多 5 版，每版有实质差异 | [97 三版本](97-three-version-messages.md) |
+| 客户已经不满 / 发火 | 3 版，整体降到 A 档 | [98 温和语气](98-warm-tone-redlines.md) / [92 客户发火](92-angry-client-recovery.md) |
+| 红线拒绝（编案例 / 加链接） | 3 版不含违规内容的等价消息 | [21 红线](21-boundaries-and-compliance.md) |
+
+三版逐版过 [15 自检](15-message-checklist.md) 与 98 的终检；标注写在引用块外，三版共用一套 `[ ]` 占位符。

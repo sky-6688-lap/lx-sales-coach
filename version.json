@@ -1,23 +1,28 @@
 {
   "schema": 1,
   "name": "lx-sales-coach",
-  "version": "v2026.11.09.05",
-  "released": "2026-11-09T15:35:00+08:00",
+  "version": "v2026.11.09.06",
+  "released": "2026-11-09T23:20:10+08:00",
   "repository": "https://github.com/sky-6688-lap/lx-sales-coach",
-  "release_tag": "v2026.11.09.05",
-  "release_url": "https://github.com/sky-6688-lap/lx-sales-coach/releases/tag/v2026.11.09.05",
+  "release_tag": "v2026.11.09.06",
+  "release_url": "https://github.com/sky-6688-lap/lx-sales-coach/releases/tag/v2026.11.09.06",
   "trace": "内容与 commit 以同名 Release tag 为准；版本文件不自引用 commit，避免循环依赖",
   "integrity": {
-    "references": 97,
-    "markdown_files": 104,
-    "min_chars": 260000,
-    "min_bytes": 615000
+    "references": 99,
+    "markdown_files": 106,
+    "min_chars": 300000,
+    "min_bytes": 710000
   },
   "update": {
-    "compare_fields": ["version", "integrity.references"],
+    "compare_fields": [
+      "version",
+      "integrity.references"
+    ],
     "endpoint": "https://raw.githubusercontent.com/sky-6688-lap/lx-sales-coach/main/version.json",
     "endpoint_fallback": "https://api.github.com/repos/sky-6688-lap/lx-sales-coach/contents/version.json",
-    "endpoint_fallback_headers": {"Accept": "application/vnd.github.raw+json"},
+    "endpoint_fallback_headers": {
+      "Accept": "application/vnd.github.raw+json"
+    },
     "policy": "先读 endpoint；网络、SSL 或代理失败时改读 endpoint_fallback（公开仓库免鉴权）；两者都读不到才回复 on_mismatch",
     "on_match": "已更新到最新版本",
     "on_mismatch": "更新未成功",

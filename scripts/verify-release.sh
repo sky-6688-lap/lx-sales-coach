@@ -218,14 +218,43 @@ for rule, why in [
     ("例外场景的成品消息同样过规则 12", "实测例外场景出现单条超 60 字的长解释"),
     ("命中后回答的第一句就是边界本身", "实测拒绝句之前仍带角色宣告或先答应后否定的开场白"),
     ("输出第一句规则（全局，优先于以下所有规则）", "角色宣告开场反复出现，需提到文件最顶端"),
+    ("三版本默认输出", "缺少规则 16：每次给客户的成品消息默认给 A / B / C 三版"),
+    ("温和语气红线", "缺少规则 17：不激怒、不挑起客户不满的表达底线"),
+    ("默认交付形态（全局，优先于以下所有规则）", "三版本口径没有提到文件最顶端"),
+    ("不激怒、不挑起客户不满", "第七节缺少红线 9"),
+    ("9. 不激怒、不挑起客户不满", "第七节缺少红线 9 条款"),
 ]:
     if rule not in skill_text:
         errors.append(f"SKILL.md {why}：缺「{rule}」")
 for trigger in ("别问了", "给我一句能发的", "一单一卡", "退款"):
     if trigger not in skill_text.split("---", 2)[1]:
         errors.append(f"description 缺少实测补强的触发词「{trigger}」")
+# 9a. 输出形态硬检查：三版本与温和语气（v2026.11.09.06）
+if "最多给 2 版" in skill_text:
+    errors.append("SKILL.md 仍写「最多给 2 版」，与规则 16 默认三版冲突")
+frontmatter = skill_text.split("---", 2)[1] if skill_text.count("---") >= 2 else ""
+for token in ("三个力度不同的版本", "逐版语气温和"):
+    if token not in frontmatter:
+        errors.append(f"SKILL.md description 缺少输出形态口径「{token}」")
+for rel in ("references/97-three-version-messages.md", "references/98-warm-tone-redlines.md"):
+    if not (root / rel).is_file():
+        errors.append(f"缺少输出形态篇：{rel}")
+    if rel.split("/")[-1] not in skill_text:
+        errors.append(f"SKILL.md 未点名 {rel}")
+for rel, token in [("references/14-quick-answers.md", "最多 2 版"),
+                   ("references/60-quick-answers-extra.md", "最多 2 版"),
+                   ("references/75-faq-for-agent.md", "最多 2 版"),
+                   ("references/20-four-part-answer-examples.md", "仍然只给一版")]:
+    f = root / rel
+    if f.is_file() and token in f.read_text(encoding="utf-8"):
+        errors.append(f"{rel} 仍残留旧口径「{token}」")
+index_all = (ref_dir / "80-glossary-and-index.md").read_text(encoding="utf-8") if (ref_dir / "80-glossary-and-index.md").is_file() else ""
+for token in ("97-three-version-messages.md", "98-warm-tone-redlines.md", "00–98"):
+    if token not in index_all:
+        errors.append(f"80 索引缺少三版本 / 温和语气口径「{token}」")
+
 readme = (root / "README.md").read_text(encoding="utf-8") if (root / "README.md").is_file() else ""
-for token in ("17–75", "76–80", "81–96"):
+for token in ("17–75", "76–80", "81–96", "97–98"):
     if token not in readme:
         errors.append(f"README 分组与 SKILL/00 不一致，缺少「{token}」")
 if "version.json" not in readme:

@@ -95,3 +95,15 @@
 - 突然变冷 / 一直白问 → [40-coldness-and-free-asking.md](40-coldness-and-free-asking.md)；信任类异议 → [07-objection-trust.md](07-objection-trust.md)。
 - 电话或语音里当场发火 → [84-channel-voice-and-call.md](84-channel-voice-and-call.md)；群内公开质疑 → [83-channel-group-and-live.md](83-channel-group-and-live.md)。
 - 出消息前过 [15-message-checklist.md](15-message-checklist.md)；应答矩阵见 [64-objection-response-matrix.md](64-objection-response-matrix.md)。
+
+## 十、发火场景的三版本降级
+
+按 SKILL.md 规则 16，争议与发火场景**仍然给三版**，但三版整体往 A 档压，不出现「A 温和、C 却在推进」的断裂：
+
+- **三版都从接住起头**：不解释成本、不辩解、不先划责任、不追问「哪里不满意」、不评价对方情绪。
+- **A 档**：「让你不舒服了，这句我先接住」+ 可回可不回的口子。
+- **B 档**：接住 + 一条可核对事实（当时写进范围的是 `[范围]`）+ 一个是否题或二选一。
+- **C 档**：只给退一步动作（「我先不解释，等你方便时按那一处回你」「我先把范围页发你，你对完再说」），不给推进、不给时间点。
+- **逐版过规则 12 与规则 17**：每版 ≤3 条、单条 ≤60 字；带着火气默读，觉得被纠正 / 被催 / 被教育就重写。
+
+三版都不承诺「保证满意」、不写「是我们全责」、不临时加赠没写进范围的东西。排布方法见 [97 三版本](97-three-version-messages.md)，禁用表达与终检见 [98 温和语气](98-warm-tone-redlines.md)。
